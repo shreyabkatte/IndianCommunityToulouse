@@ -2,7 +2,7 @@
 ------------------------------------
   LibChurch - Event Template
   Version: 1.0
- ------------------------------------ 
+ ------------------------------------
  ====================================*/
 
 /*----------------------------------------*/
@@ -394,7 +394,7 @@ ol {
 }
 
 .hero-section .hero-content p {
-  font-size: 18px;
+  font-size: 30px;
   color: #fff;
   margin-bottom: 40px;
 }
@@ -967,7 +967,7 @@ ol {
 
 .contact-us-container {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .footer-top-content h3 {
