@@ -960,6 +960,16 @@ ol {
   background: #f6f6f6;
 }
 
+.contact-us-content {
+  width: 100%;
+
+}
+
+.contact-us-container {
+  display: flex;
+  justify-content: center;  
+}
+
 .footer-top-content h3 {
   font-size: 18px;
   font-weight: 700;
