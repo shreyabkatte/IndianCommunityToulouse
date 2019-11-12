@@ -492,6 +492,11 @@ ol {
   margin-top: 40px;
 }
 
+.special-thanks-photo{
+  padding: 10px 0px 0px 0px !important;
+  margin: 30px;
+}
+
 /*---------------------
 	Service Section
 -----------------------*/
@@ -1121,6 +1126,18 @@ ol {
 /*---------------------
 	About Page
 -----------------------*/
+.teamOne {
+  display: flex;
+  justify-content: center;
+  margin-bottom : 20px
+}
+
+.teamTwo {
+  display: flex;
+  justify-content: center
+}
+
+
 .pastor {
   text-align: center;
   padding: 30px;
