@@ -321,7 +321,7 @@ ol {
 .main-menu {
   display: inline-block;
 	/* padding-top: 5px; */
-  padding-left: 150px;
+  padding-left: 180px;
 }
 
 .main-menu ul {
@@ -694,7 +694,7 @@ ol {
   align-items: center;
   display: flex;
   /* justify-content: space-between; */
-  padding-left : 400px
+  padding-left : 350px
 
 }
 
