@@ -20,7 +20,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+o {
   color: #252525;
   margin: 0;
   font-weight: 600;
@@ -50,7 +51,13 @@ h5 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
+  color: #636363;
+  line-height: 1.8;
+}
+
+k {
+  font-size: 22px;
   color: #636363;
   line-height: 1.8;
 }
