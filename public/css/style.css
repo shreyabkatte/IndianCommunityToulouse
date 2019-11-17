@@ -75,7 +75,7 @@ textarea:focus {
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  /* text-decoration: none; */
   outline: none;
 }
 
@@ -1103,6 +1103,7 @@ ol {
 .page-info-section .site-breadcrumb a,
 .page-info-section .site-breadcrumb span {
   color: #fff;
+  cursor:pointer
 }
 
 .page-info-section .site-breadcrumb i {
