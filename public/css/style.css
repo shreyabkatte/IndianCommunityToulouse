@@ -1581,7 +1581,7 @@ div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
-  width: 180px;
+  width: 300px;
 }
 
 div.gallery:hover {
@@ -1591,7 +1591,7 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   /* height: auto; */
-  max-height: 150px;
+  max-height: 180px;
 }
 
 div.desc {
