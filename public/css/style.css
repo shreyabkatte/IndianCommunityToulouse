@@ -1261,6 +1261,7 @@ ol {
 
 .blog-page .blog-item {
   margin-bottom: 50px;
+  cursor:pointer
 }
 
 /*---------------------
@@ -1646,6 +1647,7 @@ ol {
   }
   .blog-item {
     margin-bottom: 40px;
+    cursor: pointer;
   }
   .newsletter-section {
     text-align: center;
@@ -1759,6 +1761,7 @@ ol {
   }
   .blog-item {
     margin-bottom: 40px;
+    cursor:pointer
   }
   .newsletter-section {
     text-align: center;
