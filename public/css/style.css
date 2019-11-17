@@ -1549,6 +1549,25 @@ ol {
   transition: all 0.4s;
 }
 
+/*---------------------
+	Tab sections
+-----------------------*/
+
+.tablinks{
+  min-height:50px;
+  background-color:#138808; 
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  color : #fff;
+  font-size:20px;
+  width :49.9% !important;
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+
+
 .contact-form textarea {
   height: 120px;
   margin-bottom: 40px;
@@ -1778,6 +1797,8 @@ ol {
   }
 }
 
+
+
 /* small Mobile :320px. */
 @media only screen and (max-width: 479px) {
   .hero-section .hero-content h2 {
@@ -1803,3 +1824,5 @@ ol {
     margin-top: 20px;
   }
 }
+
+

@@ -102,7 +102,7 @@
 				<div class="container">
 					<h2>Event List</h2>
 					<div class="site-breadcrumb">
-						<a href="#">Home</a> <i class="fa fa-angle-right"></i>
+						<a href="event.html" style="cursor:pointer">Home</a> <i class="fa fa-angle-right"></i>
 						<span>Event List</span>
 					</div>
 				</div>
@@ -146,14 +146,17 @@
 	<section class="event-list-section spad">
 		<div class="container">
 
-				<div class="tab">
-						<button class="tablinks" onclick="openCity(event, 'London')">Upcoming Events</button>
-						<button class="tablinks" onclick="openCity(event, 'Paris')">Old Events</button>
-
+				  <div class="tab" style="margin-bottom : 50px;display :flex;justify-content: space-between">
+								<div class="col-md-6 w3-panel w3-card-4 text-center tablinks"  onclick="openCity(event, 'New')">
+										Upcoming Events
+								</div>
+								<div class="col-md-6 w3-panel w3-card-4 text-center tablinks" onclick="openCity(event, 'Old')">
+										Old Events
+								</div>
 					</div>
 
-					<div id="London" class="tabcontent">
-							<div class="section-title title-left">
+					<div id="New" class="tabcontent">
+							<div class="section-title title-left" >
 								<h2>Upcoming Events</h2>
 							</div>
 							<div class="event-list">
@@ -238,7 +241,7 @@
 							</div>
 					</div>
 
-					<div id="Paris" class="tabcontent">
+					<div id="Old" class="tabcontent">
 								<div class="section-title title-left">
 									<h2>Old Events</h2>
 								</div>
