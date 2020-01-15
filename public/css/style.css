@@ -444,10 +444,10 @@ ol {
   color: #fff;
 }
 
-.event-section .site-btn {
+/* .event-section .site-btn {
   position: relative;
   top: -15px;
-}
+} */
 
 .event-date {
   display: inline-block;
@@ -475,7 +475,6 @@ ol {
 }
 
 .event-info h3 {
-  padding-top: 5px;
   margin-bottom: 5px;
   color: #fff;
 }
@@ -671,9 +670,9 @@ ol {
   border-radius: 4px 4px 0 0;
 }
 
-.event-list h3 {
+/* .event-list h3 {
   padding-top: 5px;
-}
+} */
 
 .event-list .el-metas {
   padding-top: 15px;
@@ -1740,10 +1739,10 @@ div.desc {
   .event-info {
     margin-bottom: 40px;
   }
-  .event-section .site-btn {
+  /* .event-section .site-btn {
     top: 0;
     margin-top: 30px;
-  }
+  } */
   .event-section .counter {
     margin-left: 0;
     display: block;
