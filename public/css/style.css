@@ -90,7 +90,7 @@ ol {
 -----------------------*/
 
 /* Buttons */
-.site-btn {
+.site-btn, .member-class{
   padding: 14px 23px;
   display: inline-block;
   font-size: 14px;
@@ -104,7 +104,23 @@ ol {
   text-align: center;
 }
 
-.site-btn:hover {
+.member-class{
+  height: 75px;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-content{
+  width :100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.site-btn:hover, .member-class:hover {
   color: #fff;
 }
 
