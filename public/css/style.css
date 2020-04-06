@@ -872,6 +872,13 @@ ol {
 /*---------------------
 	Blog Section
 -----------------------*/
+
+.blog-list-style li{
+  color : #636363;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
 .blog-section {
   background: #f7f8f8;
 }
