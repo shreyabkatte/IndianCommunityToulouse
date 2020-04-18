@@ -375,13 +375,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> ICT |
 		}
 		function openCity(evt, cityName) {
 			var i, tabcontent, selectedTab, tablinks;
+			tablinks = document.getElementsByClassName("tablinks");
 			selectedTab = document.getElementById(cityName);
 			tabcontent = document.getElementsByClassName("tabcontent");
-			console.log(tabcontent);
 			for (i = 0; i < tabcontent.length; i++) {
 				tabcontent[i].style.display = "none";
+				tablinks[i].style.backgroundColor="#138808";
 			}
 			selectedTab.style.display = "";
+			evt.target.style.backgroundColor= "#3c1919";
 		}
 	</script>
 
