@@ -230,6 +230,10 @@ ol {
   display: block;
 }
 
+.section-info h5 {
+  font-size: 16px !important;
+}
+
 .section-title h2 {
   font-size: 40px;
   font-weight: 700;
@@ -1603,7 +1607,6 @@ div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
-  width: 300px;
 }
 
 div.gallery:hover {
@@ -1612,9 +1615,19 @@ div.gallery:hover {
 }
 
 div.gallery img {
+  width: auto !important;
+  max-height: max-content !important;
+}
+
+
+div.activities {
+  width: auto !important;
+}
+
+div.activities img {
   width: 100%;
   /* height: auto; */
-  max-height: 180px;
+  max-height: auto !important;
 }
 
 div.desc {
