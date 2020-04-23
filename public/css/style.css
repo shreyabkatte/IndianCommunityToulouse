@@ -1861,6 +1861,43 @@ div.desc {
     text-align: left;
     padding-top: 30px;
   }
+  .green-band-cont div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    padding : 0px !important ;
+  }
+  .green-band-cont  {
+    display: block !important;
+  }
+  .hero-section {
+    height: 200px !important;
+  }
+  .hero-section .hero-content p {
+    font-size: 15px !important;
+  }
+  .hero-section .hero-content h2 {
+    font-size: 20px !important;
+  }
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 100px !important;
+    height: 180px !important;
+  }
+  div.gallery img {
+    height :80px !important;
+  }
+  div.activities {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 100px !important;
+  }
+  div.activities img {
+    height :80px !important;
+    width : 100% !important;
+  }
 }
 
 
