@@ -246,7 +246,7 @@ ol {
 }
 
 .spad {
-  padding: 70px 0;
+  padding: 40px 0;
 }
 
 .set-bg {
@@ -1898,6 +1898,9 @@ div.desc {
   div.activities img {
     height :80px !important;
     width : 100% !important;
+  }
+  .about-us-container > div > p {
+    margin: 0px !important;
   }
 }
 
