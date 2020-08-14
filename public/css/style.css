@@ -105,6 +105,29 @@ ol {
   text-align: center;
 }
 
+.site-btn, .member-class-a{
+  padding: 14px 23px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 2px;
+  background: #FF9933;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+.member-class-a{
+  height: 75px;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .member-class{
   height: 75px;
   width: 75%;
