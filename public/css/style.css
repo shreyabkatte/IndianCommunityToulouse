@@ -119,6 +119,19 @@ ol {
   text-align: center;
 }
 
+.site-btn, .member-class-b{
+  padding: 14px 20px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 2px;
+  background: #001489;
+  letter-spacing: 1px;
+  text-align: center;
+}
 
 .member-class-a{
   height: 75px;
