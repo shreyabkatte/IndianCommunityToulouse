@@ -2250,4 +2250,6 @@ img.hover-shadow {
   height: 50px !important;
 }
 
-
+.list-style{
+  margin: 0 !important;
+}
