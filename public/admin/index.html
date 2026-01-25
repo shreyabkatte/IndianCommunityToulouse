@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Indian Community Toulouse CMS</title>
-  <!-- Decap CMS from CDN -->
   <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; }
-    h1 { text-align: center; margin-top: 2rem; }
+    body { font-family: sans-serif; margin:0; padding:0; }
+    h1 { text-align:center; margin-top:2rem; }
   </style>
 </head>
 <body>
@@ -17,21 +16,18 @@
     CMS.init({
       config: {
         backend: {
-          // Git Gateway backend (pre-authorized via token)
           name: 'git-gateway',
-          branch: 'master',  // your default branch
-          auth_token: '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'  // <-- REPLACE this with your token from Netlify
+          branch: 'master'  // your default GitHub branch
         },
-        media_folder: 'images/uploads', // folder where uploaded images are stored
+        media_folder: 'images/uploads',
         public_folder: '/images/uploads',
         collections: [
-          // Homepage content
           {
             name: 'home',
             label: 'Home Page',
             files: [
               {
-                file: 'content/home.md', // file editable via CMS
+                file: 'content/home.md',
                 label: 'Home Content',
                 name: 'home',
                 fields: [
@@ -41,11 +37,10 @@
               }
             ]
           },
-          // Example: Events list
           {
             name: 'events',
             label: 'Events',
-            folder: 'content/events', // create this folder in /public/content/
+            folder: 'content/events',
             create: true,
             slug: "{{slug}}",
             fields: [
@@ -54,11 +49,10 @@
               { label: 'Event Description', name: 'description', widget: 'markdown' }
             ]
           },
-          // Example: Gallery
           {
             name: 'gallery',
             label: 'Gallery',
-            folder: 'content/gallery', // create this folder in /public/content/
+            folder: 'content/gallery',
             create: true,
             slug: "{{slug}}",
             fields: [
@@ -66,11 +60,10 @@
               { label: 'Caption', name: 'caption', widget: 'string' }
             ]
           },
-          // Example: Announcements
           {
             name: 'announcements',
             label: 'Announcements',
-            folder: 'content/announcements', // create this folder in /public/content/
+            folder: 'content/announcements',
             create: true,
             slug: "{{slug}}",
             fields: [
