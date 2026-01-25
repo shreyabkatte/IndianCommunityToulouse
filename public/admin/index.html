@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Indian Community Toulouse CMS</title>
   <!-- Decap CMS -->
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="netlify-cms.js"></script>
   <style>
     body { font-family: sans-serif; margin:0; padding:0; }
     h1 { text-align:center; margin-top:2rem; }
@@ -20,7 +20,7 @@
         config: {
           backend: {
             name: 'git-gateway',
-            branch: 'main'  // your default branch
+            branch: 'master'  // your default branch
           },
           media_folder: 'images/uploads',
           public_folder: '/images/uploads',
