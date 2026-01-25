@@ -1,9 +1,25 @@
+---
+page_title: "ICT - Indian Community Toulouse"
+logo_web: "./img/ict-logo.png"
+logo_mobile: "./img/ict-logo.png"
+contact_email: "contact@indiancommunitytoulouse.org"
+social_links:
+  facebook: "https://www.facebook.com/CommunauteIndiennedeToulouse/"
+  linkedin: "https://www.linkedin.com/company/indiancommunitytoulouse"
+  instagram: "https://www.instagram.com/indiancommunity.toulouse/"
+  twitter: "https://twitter.com/ICT_Asso"
+  youtube: "https://www.youtube.com/channel/UCczm13OOV4xiFQXb9-r_41g"
+membership_link: "https://www.helloasso.com/associations/indian-community-toulouse/adhesions/ict-membership-adhesion-a-ict/widget"
+donation_link: "https://www.helloasso.com/associations/indian-community-toulouse/formulaires/2"
+association_description: "Association Indian Community Toulouse is a non-profit association governed by the French law of 1 July 1901 for associations declared to prefecture. It aims to bring together all the people interested in India & its cultures and represent the Indian community around Toulouse."
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
   <meta charset="utf-8">
-  <title>ICT - Indian Community Toulouse</title>
+  <title>{{ page_title }}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -70,8 +86,8 @@
           
           <div class="col-6 col-lg-2" style="margin-top : 10px">
             <a href="index.html" class="site-logo">
-              <img class="logo-web" width="50px" height="50px" src="./img/ict-logo.png" alt="">
-              <img class="logo-mobile" width="40px" height="40px" src="./img/ict-logo.png" alt="">
+              <img class="logo-web" width="50px" height="50px" src="{{ logo_web }}" alt="">
+              <img class="logo-mobile" width="40px" height="40px" src="{{ logo_mobile }}" alt="">
             </a>
             <div class="bread-crum" >
               <a href="index.html">Home</a>
@@ -149,12 +165,12 @@
                 <ul class="list-unstyled">
                   <!-- <div class="col-md-6 col-md-6 member-content text-center"> -->
                     <a class="col-md-6 col-md-6 member-content text-center img-fluid" 
-                    style="text-decoration: none" href="https://www.helloasso.com/associations/indian-community-toulouse/adhesions/ict-membership-adhesion-a-ict/widget" 
+                    style="text-decoration: none" href="{{ membership_link }}" 
                     target="_blank" class="member-class">Be a member of ICT</a>
                   <!-- </div> -->
                   <!-- <div  > -->
                     <a class="col-md-6 col-md-6 member-content text-center img-fluid" 
-                    style="text-decoration: none" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/2" target="_blank"
+                    style="text-decoration: none" href="{{ donation_link }}" target="_blank"
                      class="member-class">Donate to build the community</a>
                   <!-- </div> -->
                   <!-- <li class="mb-3">
@@ -163,18 +179,18 @@
                   </li> -->
                   <li class="mb-3">
                     <strong class="d-block mb-1">Reach out to us at: </strong>
-                    <b style='color:blue;'>contact@indiancommunitytoulouse.org</b>
+                    <b style='color:blue;'>{{ contact_email }}</b>
 
                     <!-- <span class="">contact@indiancommunitytoulouse.org</span> -->
                   </li>
                   <li class="mb-3">
                     <p class="social">
                       
-                      <a href="https://www.facebook.com/CommunauteIndiennedeToulouse/" target="_blank"><span class="icofont-facebook"></span></a>
-                      <a href="https://www.linkedin.com/company/indiancommunitytoulouse" target="_blank"><span class="icofont-linkedin"></span></a>
-                      <a href="https://www.instagram.com/indiancommunity.toulouse/" target="_blank"><span class="icofont-instagram"></span></a>
-                      <a href="https://twitter.com/ICT_Asso" target="_blank"><span class="icofont-twitter"></span></a>
-                      <a href="https://www.youtube.com/channel/UCczm13OOV4xiFQXb9-r_41g" target="_blank"><span class="icofont-youtube"></span></a>
+                      <a href="{{ social_links.facebook }}" target="_blank"><span class="icofont-facebook"></span></a>
+                      <a href="{{ social_links.linkedin }}" target="_blank"><span class="icofont-linkedin"></span></a>
+                      <a href="{{ social_links.instagram }}" target="_blank"><span class="icofont-instagram"></span></a>
+                      <a href="{{ social_links.twitter }}" target="_blank"><span class="icofont-twitter"></span></a>
+                      <a href="{{ social_links.youtube }}" target="_blank"><span class="icofont-youtube"></span></a>
                     </p>
                   </li>
                 </ul>
@@ -230,13 +246,13 @@
             <div class="row">
               <div class="col-md-4 mb-4 mb-md-0">
                 <h3 >Association ICT</h3>
-                <p>Association Indian Community Toulouse is a non-profit association governed by the French law of 1 July 1901 for associations declared to prefecture. It aims to bring together all the people interested in India & its cultures and represent the Indian community around Toulouse.</p>
+                <p>{{ association_description }}</p>
                 <p class="social" style="display:flex">
-                  <a href="https://www.facebook.com/CommunauteIndiennedeToulouse/" target="_blank"><span class="icofont-facebook"></span></a>
-                  <a href="https://www.instagram.com/indiancommunity.toulouse/" target="_blank"><span class="icofont-instagram"></span></a>
-                  <a href="https://www.youtube.com/channel/UCczm13OOV4xiFQXb9-r_41g" target="_blank"><span class="icofont-youtube"></span></a>
-                  <a href="https://www.linkedin.com/company/indiancommunitytoulouse" target="_blank"><span class="icofont-linkedin"></span></a>
-                  <a href="https://twitter.com/ICT_Asso" target="_blank"><span class="icofont-twitter"></span></a>
+                  <a href="{{ social_links.facebook }}" target="_blank"><span class="icofont-facebook"></span></a>
+                  <a href="{{ social_links.instagram }}" target="_blank"><span class="icofont-instagram"></span></a>
+                  <a href="{{ social_links.youtube }}" target="_blank"><span class="icofont-youtube"></span></a>
+                  <a href="{{ social_links.linkedin }}" target="_blank"><span class="icofont-linkedin"></span></a>
+                  <a href="{{ social_links.twitter }}" target="_blank"><span class="icofont-twitter"></span></a>
                 </p>
               </div>
               
@@ -282,8 +298,8 @@
                     
                     <ul class="list-unstyled footer-list action-list">
                       <li><a href="https://drive.google.com/uc?export=view&id=1wMNr_24WZtCZMeAHzN_CkKsETwbnO_XI" target="_blank">Why be a member of ICT?</a></li>
-                      <li><a href="https://www.helloasso.com/associations/indian-community-toulouse/adhesions/ict-membership-adhesion-a-ict/widget" target="_blank">Become a member</a></li>
-                      <li><a href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/2" target="_blank">Donate to build</a></li>
+                      <li><a href="{{ membership_link }}" target="_blank">Become a member</a></li>
+                      <li><a href="{{ donation_link }}" target="_blank">Donate to build</a></li>
                       <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfqgqBvhZL1tNnrhk3rWa19k4a33Iigl3WtPnsXv541H79L8g/viewform" target="_blank">Subscribe to ICT news</a></li>
                     </ul>
                   </div>

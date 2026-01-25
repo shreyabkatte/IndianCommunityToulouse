@@ -1,9 +1,43 @@
+---
+site_title: "ICT- Indian Community Toulouse"
+logo_web: "./img/ict-logo.png"
+logo_mobile: "./img/ict-logo.png"
+hero:
+  - title: "ICT Calendar 2026"
+    image: "./img/Home/ICT_Calendar_2026.png"
+    button_text: ""
+    button_link: ""
+    description: ""
+  - title: "Do you want to Partner or Sponsor?"
+    image: "./img/Home/LMDP3.jpg"
+    button_text: "Know more!"
+    button_link: "https://www.indiancommunitytoulouse.org/LMDP.html"
+    description: "Contact us: contact@indiancommunitytoulouse.org"
+  - title: "Asso ICT meets Prime Minister Narendra Modi and President Emmanuel Macron"
+    image: "./img/Home/ICT_with_PM.jpg"
+    button_text: "Click for more!"
+    button_link: "https://www.youtube.com/live/Dn8huNB12eI"
+    description: "February 12, 2025"
+  - title: "Indian Community Toulouse"
+    image: "./img/Home/5_Years.jpg"
+    button_text: "Become an ICT member"
+    button_link: "https://www.helloasso.com/associations/indian-community-toulouse/adhesions/ict-membership-adhesion-a-ict/widget"
+    description: "Integrating diversified cultures!!"
+social_links:
+  facebook: "https://www.facebook.com/CommunauteIndiennedeToulouse/"
+  linkedin: "https://www.linkedin.com/company/indiancommunitytoulouse"
+  instagram: "https://www.instagram.com/indiancommunity.toulouse/"
+  twitter: "https://twitter.com/ICT_Asso"
+  youtube: "https://www.youtube.com/channel/UCczm13OOV4xiFQXb9-r_41g"
+association_description: "Association Indian Community Toulouse is a non-profit association governed by the French law of 1 July 1901 for associations declared to prefecture. It aims to bring together all the people interested in India & its cultures and represent the Indian community around Toulouse."
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>ICT- Indian Community Toulouse</title>
+  <title>{{ site_title }}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -73,8 +107,8 @@
 
           <div class="col-6 col-lg-2" style="margin-top : 10px">
             <a href="index.html" class="site-logo">
-              <img class="logo-web" width="50px" height="50px" src="./img/ict-logo.png" alt="">
-              <img class="logo-mobile" width="40px" height="40px" src="./img/ict-logo.png" alt="">
+              <img class="logo-web" width="50px" height="50px" src="{{ logo_web }}" alt="">
+              <img class="logo-mobile" width="40px" height="40px" src="{{ logo_mobile }}" alt="">
             </a>
           </div>
 
@@ -148,62 +182,20 @@
           <div class="row align-items-center">
             <div class="owl-carousel slide-one-item">
 
+              {% for item in hero %}
               <div class="col-12 hero-text-image ">
                 <div class="row">
                   <div class="col-lg-5 text-center text-lg-left" style="top:70px">
-                    <h1 data-aos="fade-right">ICT Calendar 2026</h1>
-                    <!-- <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Contact us: contact@indiancommunitytoulouse.org</p> -->
-                    <!-- <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a  target="_blank" href="https://www.indiancommunitytoulouse.org/LMDP.html"
-                      class="btn btn-outline-white">Know more!</a></p> -->
+                    <h1 data-aos="fade-right">{{ item.title }}</h1>
+                    {% if item.description %}<p class="mb-5" data-aos="fade-right" data-aos-delay="100">{{ item.description }}</p>{% endif %}
+                    {% if item.button_text and item.button_link %}<p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a target="_blank" href="{{ item.button_link }}" class="btn btn-outline-white">{{ item.button_text }}</a></p>{% endif %}
                   </div>
                   <div class="col-lg-5 iphone-wrap">
-                    <img src="./img/Home/ICT_Calendar_2026.png" alt="Image" class="home-img" data-aos="fade-right">
+                    <img src="{{ item.image }}" alt="Image" class="home-img" data-aos="fade-right">
                   </div>
                 </div>
               </div>
-
-              <div class="col-12 hero-text-image ">
-                <div class="row">
-                  <div class="col-lg-5 text-center text-lg-left" style="top:70px">
-                    <h1 data-aos="fade-right">Do you want to Partner or Sponsor?</h1>
-                    <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Contact us: contact@indiancommunitytoulouse.org</p>
-                    <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a  target="_blank" href="https://www.indiancommunitytoulouse.org/LMDP.html"
-                      class="btn btn-outline-white">Know more!</a></p>
-                  </div>
-                  <div class="col-lg-5 iphone-wrap">
-                    <img src="./img/Home/LMDP3.jpg" alt="Image" class="home-img" data-aos="fade-right">
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-12 hero-text-image ">
-                <div class="row">
-                  <div class="col-lg-5 text-center text-lg-left" style="top:70px">
-                    <h1 data-aos="fade-right">Asso ICT meets Prime Minister Narendra Modi and President Emmanuel Macron</h1>
-                    <p class="mb-5" data-aos="fade-right" data-aos-delay="100">February 12, 2025</p>
-                    <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a  target="_blank" href="https://www.youtube.com/live/Dn8huNB12eI"
-                      class="btn btn-outline-white">Click for more!</a></p>
-                  </div>
-                  <div class="col-lg-5 iphone-wrap">
-                    <img src="./img/Home/ICT_with_PM.jpg" alt="Image" class="home-img" data-aos="fade-right">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 hero-text-image ">
-                <div class="row">
-                  <div class="col-lg-5 text-center text-lg-left" style="top:70px">
-                    <h1 data-aos="fade-right">Indian Community Toulouse</h1>
-                    <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Integrating diversified cultures!!</p>
-                    <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a target="_blank" href="https://www.helloasso.com/associations/indian-community-toulouse/adhesions/ict-membership-adhesion-a-ict/widget"
-                        class="btn btn-outline-white">Become an ICT member</a></p>
-                  </div>
-                  <div class="col-lg-5 iphone-wrap">
-                    <img src="./img/Home/5_Years.jpg" alt="Image" class="home-img" data-aos="fade-right">
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
 
             </div>
           </div>
