@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Indian Community Toulouse CMS</title>
-  <!-- Decap CMS -->
-  <script src="netlify-cms.js"></script>
   <style>
     body { font-family: sans-serif; margin:0; padding:0; }
     h1 { text-align:center; margin-top:2rem; }
@@ -13,36 +11,37 @@
 <body>
   <h1>Loading CMS...</h1>
 
+  <!-- Netlify CMS mounts here -->
+  <div id="nc-root"></div>
+
+  <!-- Local CMS script -->
+  <script src="netlify-cms.js"></script>
+
+  <!-- Initialize CMS -->
   <script>
-    // Initialize CMS after script loads
-    window.addEventListener('load', function() {
-      CMS.init({
-        config: {
-          backend: {
-            name: 'git-gateway',
-            branch: 'master'  // your default branch
-          },
-          media_folder: 'images/uploads',
-          public_folder: '/images/uploads',
-          collections: [
-            {
-              name: 'home',
-              label: 'Home Page',
-              files: [
-                {
-                  file: 'content/home.md',
-                  label: 'Home Content',
-                  name: 'home',
-                  fields: [
-                    { label: 'Title', name: 'title', widget: 'string' },
-                    { label: 'Main Text', name: 'body', widget: 'markdown' }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      });
+    CMS.init({
+      config: {
+        backend: { name: 'git-gateway', branch: 'master' },
+        media_folder: 'images/uploads',
+        public_folder: '/images/uploads',
+        collections: [
+          {
+            name: 'home',
+            label: 'Home Page',
+            files: [
+              {
+                file: 'content/home.md',
+                label: 'Home Content',
+                name: 'home',
+                fields: [
+                  { label: 'Title', name: 'title', widget: 'string' },
+                  { label: 'Main Text', name: 'body', widget: 'markdown' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     });
   </script>
 </body>
