@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Indian Community Toulouse CMS</title>
-  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^2.0.0/dist/decap-cms.js"></script>
   <style>
     body { font-family: sans-serif; margin:0; padding:0; }
     h1 { text-align:center; margin-top:2rem; }
@@ -13,68 +14,35 @@
   <h1>Loading CMS...</h1>
 
   <script>
-    CMS.init({
-      config: {
-        backend: {
-          name: 'git-gateway',
-          branch: 'master',  // your default GitHub branch
-          auth_token: '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'
-        },
-        media_folder: 'images/uploads',
-        public_folder: '/images/uploads',
-        collections: [
-          {
-            name: 'home',
-            label: 'Home Page',
-            files: [
-              {
-                file: 'content/home.md',
-                label: 'Home Content',
-                name: 'home',
-                fields: [
-                  { label: 'Title', name: 'title', widget: 'string' },
-                  { label: 'Main Text', name: 'body', widget: 'markdown' }
-                ]
-              }
-            ]
+    // Initialize CMS after script loads
+    window.addEventListener('load', function() {
+      CMS.init({
+        config: {
+          backend: {
+            name: 'git-gateway',
+            branch: 'main'  // your default branch
           },
-          {
-            name: 'events',
-            label: 'Events',
-            folder: 'content/events',
-            create: true,
-            slug: "{{slug}}",
-            fields: [
-              { label: 'Event Title', name: 'title', widget: 'string' },
-              { label: 'Event Date', name: 'date', widget: 'datetime' },
-              { label: 'Event Description', name: 'description', widget: 'markdown' }
-            ]
-          },
-          {
-            name: 'gallery',
-            label: 'Gallery',
-            folder: 'content/gallery',
-            create: true,
-            slug: "{{slug}}",
-            fields: [
-              { label: 'Image', name: 'image', widget: 'image' },
-              { label: 'Caption', name: 'caption', widget: 'string' }
-            ]
-          },
-          {
-            name: 'announcements',
-            label: 'Announcements',
-            folder: 'content/announcements',
-            create: true,
-            slug: "{{slug}}",
-            fields: [
-              { label: 'Title', name: 'title', widget: 'string' },
-              { label: 'Message', name: 'message', widget: 'markdown' },
-              { label: 'Date', name: 'date', widget: 'datetime' }
-            ]
-          }
-        ]
-      }
+          media_folder: 'images/uploads',
+          public_folder: '/images/uploads',
+          collections: [
+            {
+              name: 'home',
+              label: 'Home Page',
+              files: [
+                {
+                  file: 'content/home.md',
+                  label: 'Home Content',
+                  name: 'home',
+                  fields: [
+                    { label: 'Title', name: 'title', widget: 'string' },
+                    { label: 'Main Text', name: 'body', widget: 'markdown' }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      });
     });
   </script>
 </body>
