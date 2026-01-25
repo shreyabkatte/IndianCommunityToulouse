@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Indian Community CMS</title>
+  <!-- Decap CMS script from CDN -->
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+</head>
+<body>
+  <h1>Loading CMS...</h1>
+
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'git-gateway',
+          branch: 'main' // your GitHub branch
+        },
+        media_folder: 'images/uploads', // folder for uploaded images
+        public_folder: '/images/uploads',
+        collections: [
+          {
+            name: 'home',
+            label: 'Home Page',
+            files: [
+              {
+                file: 'content/home.md',
+                label: 'Home Content',
+                name: 'home',
+                fields: [
+                  { label: 'Title', name: 'title', widget: 'string' },
+                  { label: 'Main Text', name: 'body', widget: 'markdown' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>
