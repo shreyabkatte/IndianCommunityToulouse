@@ -1,10 +1,11 @@
 backend:
   name: github
   repo: shreyabkatte/IndianCommunityToulouse
-  branch: master
+  branch: cms-test
+  client_id: Ov23livy0pfISgwJTiC5
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
 
 collections:
   - name: "home"
