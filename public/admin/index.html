@@ -1,30 +1,52 @@
-<script>
-CMS.init({
-  config: {
-    backend: {
-      name: 'github',
-      repo: 'shreyabkatte/IndianCommunityToulouse',
-      branch: 'main'
-    },
-    media_folder: 'images/uploads',
-    public_folder: '/images/uploads',
-    collections: [
-      {
-        name: 'home',
-        label: 'Home Page',
-        files: [
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Community Toulouse CMS</title>
+  <!-- Decap CMS from CDN -->
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center; margin-top:2rem;">Loading CMS...</h1>
+
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          // Use GitHub backend since Netlify Identity is not available
+          name: 'github',
+          repo: 'shreyabkatte/IndianCommunityToulouse', // your GitHub repo
+          branch: 'main', // your default branch
+          auth_scope: 'repo' // permission to commit changes
+        },
+        media_folder: 'images/uploads', // folder for uploaded images
+        public_folder: '/images/uploads',
+        collections: [
           {
-            file: 'content/home.md',
-            label: 'Home Content',
             name: 'home',
-            fields: [
-              { label: 'Title', name: 'title', widget: 'string' },
-              { label: 'Main Text', name: 'body', widget: 'markdown' }
+            label: 'Home Page',
+            files: [
+              {
+                file: 'content/home.md', // path to editable file
+                label: 'Home Content',
+                name: 'home',
+                fields: [
+                  { label: 'Title', name: 'title', widget: 'string' },
+                  { label: 'Main Text', name: 'body', widget: 'markdown' }
+                ]
+              }
             ]
           }
         ]
       }
-    ]
-  }
-});
-</script>
+    });
+  </script>
+</body>
+</html>
