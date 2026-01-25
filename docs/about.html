@@ -1,52 +1,75 @@
 ---
-page_title: "About Us - Indian Community Toulouse"
-hero_title: "Our Vision"
-hero_content: "Connecting and collaborating to build a welcoming, inclusive, and supportive community that unites Indians in and around Toulouse, fostering cultural, social, and economic integration with French society. We aim to be a model of community engagement, professionalism, and transparency, contributing to the collective well-being and growth of our community."
+page_title: About Us - Indian Community Toulouse
+hero_title: Our Vision
+hero_content: >-
+  Connecting and collaborating to build a welcoming, inclusive, and supportive
+  community that unites Indians in and around Toulouse, fostering cultural,
+  social, and economic integration with French society. We aim to be a model of
+  community engagement, professionalism, and transparency, contributing to the
+  collective well-being and growth of our community.
 objectives:
-  - "Connecting Cultures, Building Friendships"
-  - "Support students, professionals, and families settling in Toulouse"
-  - "Showcasing Indian Heritage"
-  - "Leading with Integrity & Transparency"
-  - "Giving Back through Service & Collaboration"
-  - "Strengthening Indo-French People-to-People Ties"
-  - "Promoting Sustainability & Inclusion"
-  - "Learning, Sharing & Inspiring"
-vision_image: "https://drive.google.com/uc?export=view&id=12P1xP_V9XZv1kuqefT27sW0KLXgnlImr"
-team_intro: "Our young and energetic team of volunteers are committed to helping the community on non-profit basis. We are a group of diverse cultural, professional, linguistic & ethnic backgrounds. We take our convictions and turn them into action. Think you would be a good fit? Get in touch for more information!"
+  - Connecting Cultures, Building Friendships
+  - Support students, professionals, and families settling in Toulouse
+  - Showcasing Indian Heritage
+  - Leading with Integrity & Transparency
+  - Giving Back through Service & Collaboration
+  - Strengthening Indo-French People-to-People Ties
+  - Promoting Sustainability & Inclusion
+  - Learning, Sharing & Inspiring
+vision_image: https://drive.google.com/uc?export=view&id=12P1xP_V9XZv1kuqefT27sW0KLXgnlImr
+team_intro: >-
+  Our young and energetic team of volunteers are committed to helping the
+  community on non-profit basis. We are a group of diverse cultural,
+  professional, linguistic & ethnic backgrounds. We take our convictions and
+  turn them into action. Think you would be a good fit? Get in touch for more
+  information!
 team_members:
-  - name: "Ravi Shankar"
-    role: "President"
-    image: "./img/about/ravi.jpg"
-    about: "Bangalorean moved to Toulouse in 2016 - Project Manager / Agilist by profession at Airbus, qualified yoga instructor and the founding member of the association. Ravi loves to travel and explore different cultures and foods"
-  - name: "Naman"
-    role: "Treasurer"
-    image: "./img/about/naman.jpg"
-    about: "Toulouse welcomed Naman as a student in 2017. He is now working as an Aircraft Controls Engineer at Akkodis. He prefers to spend time in mountains - trekking, camping, skiing and near sea - enjoying the tranquility"
-  - name: "Thara Bai"
-    role: "Secretary"
-    image: "./img/about/Thara.jpg"
-    about: "Moved to Toulouse in 2017 to accompany her spouse. She is a trained classical dancer, yoga instructor and founding member of the association. She likes to socialise, support, cook and travel"
-# ... add other members similarly
+  - name: Ravi Shankar
+    role: President
+    image: ./img/about/ravi.jpg
+    about: >-
+      Bangalorean moved to Toulouse in 2016 - Project Manager / Agilist by
+      profession at Airbus, qualified yoga instructor and the founding member of
+      the association. Ravi loves to travel and explore different cultures and
+      foods
+  - name: Naman
+    role: Treasurer
+    image: ./img/about/naman.jpg
+    about: >-
+      Toulouse welcomed Naman as a student in 2017. He is now working as an
+      Aircraft Controls Engineer at Akkodis. He prefers to spend time in
+      mountains - trekking, camping, skiing and near sea - enjoying the
+      tranquility
+  - name: Thara Bai
+    role: Secretary
+    image: ./img/about/Thara.jpg
+    about: >-
+      Moved to Toulouse in 2017 to accompany her spouse. She is a trained
+      classical dancer, yoga instructor and founding member of the association.
+      She likes to socialise, support, cook and travel
 special_thanks:
-  - name: "Shreya"
-    role: "Website Developer"
-    image: "./img/about/shreya.jpg"
-  - name: "Deepak"
-    role: "Logo & Poster Designer"
-    image: "./img/about/deepak.jpg"
-  - name: "Hari Prasath"
-    role: "Logo & Poster Designer"
-    image: "./img/about/hariprakash.jpg"
-cta_text: "Association Indian Community Toulouse is a non-profit association governed by the French law of 1 July 1901 for associations declared to prefecture. It aims to bring together all the people interested in India & its cultures and represent the Indian community around Toulouse."
+  - name: Shreya Nayak
+    role: Website Developer
+    image: ./img/about/shreya.jpg
+  - name: Deepak
+    role: Logo & Poster Designer
+    image: ./img/about/deepak.jpg
+  - name: Hari Prasath
+    role: Logo & Poster Designer
+    image: ./img/about/hariprakash.jpg
+cta_text: >-
+  Association Indian Community Toulouse is a non-profit association governed by
+  the French law of 1 July 1901 for associations declared to prefecture. It aims
+  to bring together all the people interested in India & its cultures and
+  represent the Indian community around Toulouse.
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>{{ page_title }}</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <link href="css/style.css" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
 <div class="site-wrap">
@@ -66,7 +89,7 @@ cta_text: "Association Indian Community Toulouse is a non-profit association gov
         <li>{{ objective }}</li>
         {% endfor %}
       </ul>
-      <img src="{{ vision_image }}" alt="Vision Image">
+      <img src="{{ vision_image }}" alt="Vision Image" />
     </div>
   </div>
 
@@ -78,7 +101,7 @@ cta_text: "Association Indian Community Toulouse is a non-profit association gov
       <div class="row our-team-container">
         {% for member in team_members %}
         <div class="col-sm-6 col-md-4 pastor-style img-fluid">
-          <img src="{{ member.image }}" alt="{{ member.name }}">
+          <img src="{{ member.image }}" alt="{{ member.name }}" />
           <h3>{{ member.name }}</h3>
           <p>{{ member.role }}</p>
           <p>{{ member.about }}</p>
@@ -95,7 +118,7 @@ cta_text: "Association Indian Community Toulouse is a non-profit association gov
       <div class="row our-team-container">
         {% for person in special_thanks %}
         <div class="col-sm-6 col-md-2 pastor-style img-fluid">
-          <img src="{{ person.image }}" alt="{{ person.name }}">
+          <img src="{{ person.image }}" alt="{{ person.name }}" />
           <h3>{{ person.name }}</h3>
           <p>{{ person.role }}</p>
         </div>
