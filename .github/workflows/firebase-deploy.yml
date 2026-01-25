@@ -1,0 +1,25 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - cms-test
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+      - name: Build static site (if any build step)
+        run: |
+          if [ -f package.json ]; then npm install && npm run build; fi
+      - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: |
+          firebase deploy --non-interactive --only hosting

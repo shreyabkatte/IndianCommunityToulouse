@@ -1,0 +1,38 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - cms-test
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (if any)
+        run: |
+          if [ -f package.json ]; then npm install; fi
+
+      - name: Build static site (if any build step)
+        run: |
+          if [ -f package.json ]; then npm run build; fi
+
+      - name: Copy static files
+        run: |
+          mkdir -p public
+          cp -r public/* docs/
+          cp -r public/. docs/ || true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
