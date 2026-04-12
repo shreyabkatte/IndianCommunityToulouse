@@ -1719,6 +1719,10 @@ figure figcaption {
 }
 
 .english-content{
+  display: block;
+}
+
+.french-content{
   display: none;
 }
 
@@ -1872,22 +1876,67 @@ figure figcaption {
 
 
 .workshop-cards{
-  max-width:32% ; 
-  padding-left:30px !important;
-  display: flex; 
-  background-color: white ;
-  border-radius: 8px; 
-  padding:20px 10px ;
-  align-items: center;
-  border :1px solid #d3d3d3
+  width: 100% !important;
+  max-width: none !important;
+  padding-left: 16px !important;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px 10px;
+  align-items: flex-start;
+  border: 1px solid #d3d3d3;
+}
+
+.workshop-cards h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.workshop-cards p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.workshop-cards img {
+  border-radius: 10px;
+}
+
+.workshop-cards div[style*="margin-top: 16px"] {
+  margin-top: 12px !important;
+}
+
+.workshop-cards div[style*="gap: 10px"] {
+  gap: 8px !important;
+}
+
+.workshop-cards h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.workshop-cards p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.workshop-cards img {
+  border-radius: 10px;
+  display: block;
+}
+
+.first-para{
+  margin:30px 6% !important;
 }
 
 .collaboration-card-mobile{
   display: none;
 }
 
-.first-para{
-  margin:50px 6%;
+.collaboration-card-web{
+  display: block;
 }
 
 @media screen and (max-width: 992px) {
@@ -1917,9 +1966,9 @@ figure figcaption {
     text-align: center;
   }
 
-  .first-para{
-    margin:20px 6% !important
-  }
+  /* .first-para{
+    margin:10px 6% !important
+  } */
 
   .lmdp-sections{padding: 30px 10px 50px 10px !important;}
   
