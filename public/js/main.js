@@ -203,6 +203,42 @@
 	        }
 		    }
 			});
+
+			// Initialize workshop carousels with delay to ensure content is visible
+			setTimeout(function() {
+				if ( $('.workshop-images-carousel').length > 0 && !$('.workshop-images-carousel').hasClass('owl-loaded') ) {
+					$('.workshop-images-carousel').owlCarousel({
+				    center: false,
+				    items: 1,
+				    loop: true,
+						stagePadding: 0,
+				    margin: 10,
+				    smartSpeed: 1000,
+				    autoplay: false,
+				    nav: true,
+						navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+				    responsive:{
+			        600:{
+			        	margin: 10,
+			        	nav: true,
+			          items: 1
+			        },
+			        1000:{
+			        	margin: 10,
+			        	stagePadding: 0,
+			        	nav: true,
+			          items: 3
+			        },
+			        1200:{
+			        	margin: 10,
+			        	stagePadding: 0,
+			        	nav: true,
+			          items: 3
+			        }
+				    }
+					});
+				}
+			}, 1000);
 		}
 
 		$('.slide-one-item').owlCarousel({
