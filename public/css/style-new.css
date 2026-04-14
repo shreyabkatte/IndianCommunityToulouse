@@ -1,0 +1,54 @@
+/* Simple responsive workshop images */
+.workshop-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.workshop-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Mobile: Show carousel */
+@media (max-width: 1023px) {
+  .workshop-images {
+    display: none;
+  }
+  
+  .workshop-carousel {
+    display: block !important;
+  }
+}
+
+/* Desktop: Hide carousel, show grid */
+@media (min-width: 1024px) {
+  .workshop-carousel {
+    display: none !important;
+  }
+  
+  .workshop-images {
+    display: grid;
+  }
+}
+
+.workshop-carousel {
+  margin-top: 15px;
+}
+
+
+ .logo-web{
+    display:none !important
+  }
+
+.workshop-carousel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
