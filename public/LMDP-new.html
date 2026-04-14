@@ -84,6 +84,7 @@
     .coming-soon-link:hover::before {
       opacity: 1;
     }
+
   </style>
 </head>
 
@@ -142,7 +143,7 @@
           </div>
           
           <div class="col-md-5 language-logos-web">
-             <img class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer;" width="17%" title="Version française"/> 
+             <img class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer; opacity: 0.5; pointer-events: none;" width="17%" title="Version française" disabled/> 
              <img class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer" width="17%"/>
           </div>
         </div>
@@ -154,8 +155,27 @@
     <img class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer" width="6%"/>  
   </div>
 
-  <img class="logo-web" width=100% src="img/LMDP/LMDP_2026_Web_English.png" alt="">
-  <img class="logo-mobile" width=100% src="img/LMDP/LMDP_2026_Mobile_English.png" alt="">
+  <!-- Banner with Overlay Buttons -->
+  <!-- <div style="position: relative; width: 100%; display: block;"> -->
+    <img class="logo-web" width="100%" src="img/LMDP/LMDP_2026_Web_English.png" alt="">
+    <img class="logo-mobile" width="100%" src="img/LMDP/LMDP_2026_Mobile_English.png" alt="">
+    
+    <!-- Buttons Overlay - Bottom Left -->
+    <div style="position: absolute; bottom: 5px; left: 170px; display: flex; gap: 330px; z-index: 100; display: none !important;">
+      <a href="./LMDP-new.html" style="text-decoration: none; position: relative;" title="Registration coming soon">
+        <button style="padding: 12px 30px; background: linear-gradient(-45deg, #E23CBF, #E94B8F , #F15A60); color: white; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.2);" disabled>
+          Free Entrance
+        </button>
+      </a>
+      <a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="text-decoration: none;">
+        <button style="padding: 12px 30px; background: linear-gradient(-45deg, #E23CBF, #E94B8F , #F15A60); color: white; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+          Register
+        </button>
+      </a>
+    </div>
+  <!-- </div> -->
+
+<div>
 
   <!-- ENGLISH SECTION -->
   <div id="english" class="lmdp-container english-content">
@@ -313,14 +333,12 @@
         <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="arts">
           <div><img src="./img/LMDP/workshops/arts/1.jpeg" alt="Art 1" /></div>
           <div><img src="./img/LMDP/workshops/arts/2.jpeg" alt="Art 2" /></div>
-          <div><img src="./img/LMDP/workshops/arts/3.jpeg" alt="Art 3" /></div>
         </div>
         
         <!-- Desktop Grid -->
         <div class="workshop-images">
           <img src="./img/LMDP/workshops/arts/1.jpeg" alt="Art 1" />
           <img src="./img/LMDP/workshops/arts/2.jpeg" alt="Art 2" />
-          <img src="./img/LMDP/workshops/arts/3.jpeg" alt="Art 3" />
         </div>
       </div>
 
@@ -335,14 +353,12 @@
         <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="fun">
           <div><img src="./img/LMDP/workshops/fun/1.jpeg" alt="Fun 1" /></div>
           <div><img src="./img/LMDP/workshops/fun/2.jpeg" alt="Fun 2" /></div>
-          <div><img src="./img/LMDP/workshops/fun/3.jpeg" alt="Fun 3" /></div>
         </div>
         
         <!-- Desktop Grid -->
         <div class="workshop-images">
           <img src="./img/LMDP/workshops/fun/1.jpeg" alt="Fun 1" />
           <img src="./img/LMDP/workshops/fun/2.jpeg" alt="Fun 2" />
-          <img src="./img/LMDP/workshops/fun/3.jpeg" alt="Fun 3" />
         </div>
       </div>
 
