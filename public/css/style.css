@@ -1970,7 +1970,7 @@ figure figcaption {
     margin:10px 6% !important
   } */
 
-  .lmdp-sections{padding: 30px 10px 50px 10px !important;}
+  .lmdp-sections{padding: 10px 10px 10px 10px !important;}
   
   .collaboration-card-mobile{
     display: block !important;
@@ -2314,10 +2314,16 @@ figure figcaption {
   /* About LMDP section headings for mobile */
   div[style*="background-color: azure"] h3 {
     font-size: 20px !important;
+    margin-top: 25px !important;
   }
 
   div[style*="background-color: azure"] p {
-    font-size: 14px !important;
+    font-size: 12px !important;
+  }
+
+  /* What is in the Program section heading for mobile */
+  .lmdp-sections > div > h3:nth-of-type(1) {
+    margin-top: 25px !important;
   }
 
   /* Volunteer section heading and content for mobile */
@@ -2327,6 +2333,7 @@ figure figcaption {
     margin-left: auto !important;
     margin-right: auto !important;
     line-height: 1.5 !important;
+    margin-top: 25px !important;
   }
 
   .lmdp-sections p {
@@ -2347,9 +2354,62 @@ figure figcaption {
     padding: 10px !important;
   }
 
-  .lmdp-sections .row .col-md-6 {
+  .lmdp-sections .row .col-md-2 {
     max-width: 100% !important;
     flex: 0 0 100% !important;
+  }
+
+  /* Sponsor images size reduction for mobile */
+  .row[style*="margin: 20px"] img[src*="sponsors"] {
+    max-width: 40% !important;
+  }
+
+  /* Collaborations section responsive layout for mobile */
+  .row[style*="margin: 20px"] > div[style*="display: flex"] {
+    display: block !important;
+    flex-direction: column !important;
+  }
+
+  .row[style*="margin: 20px"] .col-md-4,
+  .row[style*="margin: 20px"] .col-md-7 {
+    max-width: 100% !important;
+    display: block !important;
+    margin-bottom: 20px !important;
+  }
+
+  .row[style*="margin: 20px"] > div > div[style*="display: flex; justify-content: center;"] {
+    display: block !important;
+  }
+
+  /* Ensure AOS fade-right divs display on mobile */
+  div[data-aos="fade-right"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Center Collaborations section on mobile */
+  div[data-aos="fade-right"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  div[data-aos="fade-right"] h3 {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .lmdp-sections > div[style*="margin-left: 5%"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Reduce collaboration images size on mobile */
+  .row[style*="margin: 20px"] img[src*="ICT full.jpg"],
+  .row[style*="margin: 20px"] img[src*="toulouse-marie.png"] {
+    width: 20% !important;
   }
 }
 
