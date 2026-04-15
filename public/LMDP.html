@@ -105,7 +105,7 @@
         </div>
           <div class="col-md-6 d-none d-lg-block">
             <nav class="site-navigation position-relative" role="navigation">
-              <ul id="english-menu" class="site-menu main-menu js-clone-nav mr-auto language-menu english-menu">
+              <ul id="english-menu" class="site-menu main-menu js-clone-nav mr-auto language-menu english-menu" style="display: none;">
                 <li><a style="color:#000000 !important" href="./LMDP-new.html#english-section-1" class="nav-link">About</a></li>
                 <li><a style="color:#000000 !important" href="./LMDP-new.html#english-section-2" class="nav-link">Program</a></li>
                 <li><a style="color:#000000 !important" href="./LMDP-new.html#volunteer-section-english" class="nav-link">Practical Info</a></li>
@@ -117,7 +117,7 @@
                   </ul>
                 </li>
               </ul>
-              <ul  id="french-menu" class="site-menu main-menu js-clone-nav mr-auto language-menu french-menu" style="display: none;">
+              <ul  id="french-menu" class="site-menu main-menu js-clone-nav mr-auto language-menu french-menu">
                 <li><a style="color:#000000 !important" href="./LMDP-new.html#section-1" class="nav-link">Contexte</a></li>
                 <li><a style="color:#000000 !important" href="./LMDP-new.html#section-2" class="nav-link">Programme</a></li>
                 <li><a style="color:#000000 !important" href="./LMDP-new.html#volunteer-section-french" class="nav-link">Informations Practiques</a></li>
@@ -137,14 +137,14 @@
             <a  id="english-button" class="language-button english-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none;" >
               <input type="submit" class="btn btn-primary d-block w-45 img-fluid register-button" value="Donate">
             </a>
-            <a  id="french-button" class="language-button french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/lmdp-inscription-registration-2" target="_blank" style="text-decoration: none; display: none;" >
+            <a  id="french-button" class="language-button french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/lmdp-inscription-registration-2" target="_blank" style="text-decoration: none;" >
               <input type="submit" class="btn btn-primary d-block w-45 img-fluid register-button" value="S'inscrire">
             </a>
           </div>
           
           <div class="col-md-5 language-logos-web">
-             <img class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer; opacity: 0.5; pointer-events: none;" width="17%" title="Version française" disabled/> 
-             <img class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer" width="17%"/>
+             <img class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer;" width="17%" title="Version française"/> 
+             <img class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer; opacity: 0.5; pointer-events: none;" width="17%"/>
           </div>
         </div>
       </div>
@@ -157,8 +157,10 @@
 
   <!-- Banner with Overlay Buttons -->
   <!-- <div style="position: relative; width: 100%; display: block;"> -->
-    <img class="logo-web" width="100%" src="img/LMDP/LMDP_2026_Web_English.png" alt="">
-    <img class="logo-mobile" width="100%" src="img/LMDP/LMDP_2026_Mobile_English.png" alt="">
+    <img class="logo-web french-banner" width="100%" src="img/LMDP/LMDP_2026_Web_French.png" alt="">
+    <img class="logo-mobile french-banner" width="100%" src="img/LMDP/LMDP_2026_Mobile_French.png" alt="">
+    <img class="logo-web english-banner" width="100%" src="img/LMDP/LMDP_2026_Web_English.png" alt="" style="display: none;">
+    <img class="logo-mobile english-banner" width="100%" src="img/LMDP/LMDP_2026_Mobile_English.png" alt="" style="display: none;">
     
     <!-- Buttons Overlay - Bottom Left -->
     <div style="position: absolute; bottom: 5px; left: 170px; display: flex; gap: 330px; z-index: 100; display: none !important;">
@@ -178,7 +180,7 @@
 <div>
 
   <!-- ENGLISH SECTION -->
-  <div id="english" class="lmdp-container english-content">
+  <div id="english" class="lmdp-container english-content" style="display: none;">
 
     <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 15px;">
       <svg width="40" height="20" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
@@ -500,40 +502,17 @@
   </div>
 
   <!-- FRENCH SECTION -->
-  <div id="french" class="lmdp-container french-content" style="display: none;">
+  <div id="french" class="lmdp-container french-content">
 
-    <!-- YouTube Videos Gallery - French -->
-    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 20px; width: 100%; margin: 40px auto; max-width: 600px;">
-      <a href="https://www.youtube.com/watch?v=cAVh_ZWvcqE" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 280px; width: 100%; text-decoration: none; color: inherit;">
-        <div style="position: relative; display: inline-block; width: 100%;">
-          <img src="https://img.youtube.com/vi/cAVh_ZWvcqE/hqdefault.jpg" alt="YouTube video thumbnail" style="width: 100%; display: block; border: none; border-radius: 8px;" />
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
-            <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
-          </div>
-        </div>
-        <div style="padding: 8px 0; text-align: center; font-weight: 700;">LMDP 1 Highlights</div>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=yndgbgnCi90" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 280px; width: 100%; text-decoration: none; color: inherit;">
-        <div style="position: relative; display: inline-block; width: 100%;">
-          <img src="https://img.youtube.com/vi/yndgbgnCi90/hqdefault.jpg" alt="YouTube video thumbnail" style="width: 100%; display: block; border: none; border-radius: 8px;" />
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
-            <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
-          </div>
-        </div>
-        <div style="padding: 8px 0; text-align: center; font-weight: 700;">LMDP 2 Highlights</div>
-      </a>
-    </div>
-
-    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 15px; margin-top: 15px;">
-      <svg width="60" height="40" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 15px;">
+      <svg width="40" height="20" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
         <!-- France Flag -->
         <rect width="300" height="600" fill="#002395"/>
         <rect x="300" width="300" height="600" fill="#FFFFFF"/>
         <rect x="600" width="300" height="600" fill="#ED2939"/>
       </svg>
-      <h3 style="text-align: center; margin: 0;">UN VOYAGE GASTRONOMIQUE</h3>
-      <svg width="60" height="40" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <h3 style="text-align: center; margin: 0;">Un voyage gastronomique</h3>
+      <svg width="40" height="20" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
         <!-- India Flag -->
         <rect width="1200" height="267" fill="#FF9933"/>
         <rect y="267" width="1200" height="266" fill="#FFFFFF"/>
@@ -553,257 +532,272 @@
         <line x1="627" y1="327" x2="573" y2="473" stroke="#1f41a8" stroke-width="2"/>
       </svg>
     </div>
-
-    <p class="first-para" style="text-align: center; padding: 20px; font-size: 16px;">
-      Comment pouvez-vous consommer des produits locaux et de saison lorsque vous êtes un gourmet ?
-      A travers une rencontre entre producteurs locaux et experts de la cuisine indienne,
-      cet évènement permettra à chacun de découvrir de nouvelles pratiques culinaires inspirées de la tradition indienne.
+    <p  style="text-align: center; font-style: italic; color: #666; margin: 10px 6% 8px;" data-aos="fade-down">La rencontre entre les traditions indiennes et le public local, à travers une gastronomie et une
+culture authentiques</p>
+    <p class="first-para" data-aos="fade-down" >Recherche de cuisine de rue indienne authentique tout en valorisant des ingrédients locaux et de saison ?
     </p>
 
-    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-      <a href="./img/LMDP/Ingredients & Recipe.pdf" target="_blank" style="text-decoration: none;" class="col-md-4">
-        <input type="submit" class="btn btn-primary d-block w-100 img-fluid" style="padding: 8px 0px !important;background: #F15AA8;" value="Ingrédients et recettes pour la cuisine indienne">
+    <p class="first-para" style="margin-top: -25px !important;" data-aos="fade-down" >Venez découvrir la réponse lors de cette expérience culinaire unique à La Mela Des Plats le 07 juin 2026 !
+    </p>
+
+    <ul style="list-style: none; padding-left: 30px; margin: 30px 6% !important;">
+      <li style="margin-bottom: 10px;"><i class="fas fa-utensils" style="color: #F15AA8; margin-right: 10px;"></i> Rencontrez des chefs indiens passionnés cuisinant à domicile</li>
+      <li style="margin-bottom: 10px;"><i class="fas fa-utensils" style="color: #F15AA8; margin-right: 10px;"></i> Découvrez la richesse de la cuisine indienne</li>
+      <li style="margin-bottom: 10px;"><i class="fas fa-utensils" style="color: #F15AA8; margin-right: 10px;"></i> Explorez des épices authentiques et des techniques de cuisson traditionnelles</li>
+      <li style="margin-bottom: 10px;"><i class="fas fa-utensils" style="color: #F15AA8; margin-right: 10px;"></i> Dégustez des plats créatifs mêlant produits locaux et inspiration indienne</li>
+    </ul>
+
+
+    <p class="first-para" data-aos="fade-down" >Laissez-vous emporter par des saveurs vibrantes, des arômes envoûtants et une fusion de cultures où tradition et créativité se rencontrent.
+    </p>
+
+    <p class="first-para" style="margin-top: -25px !important;" data-aos="fade-down" >Un événement incontournable pour les amateurs de cuisine et les gourmets curieux ! Rejoignez-nous et découvrez une nouvelle façon de manger : locale, de saison… et délicieusement indienne !
+    </p>
+
+    
+    <!-- YouTube Videos Gallery -->
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 20px; width: 100%; margin: 40px auto; max-width: 600px;">
+      <a href="https://www.youtube.com/watch?v=cAVh_ZWvcqE" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 280px; width: 100%; text-decoration: none; color: inherit;">
+        <div style="position: relative; display: inline-block; width: 100%;">
+          <img src="https://img.youtube.com/vi/cAVh_ZWvcqE/hqdefault.jpg" alt="YouTube video thumbnail" style="width: 100%; display: block; border: none; border-radius: 8px;" />
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
+            <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
+          </div>
+        </div>
+        <div style="padding: 8px 0; text-align: center; font-weight: 700;">Les moments fortsde LMDP 2022</div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=yndgbgnCi90" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 280px; width: 100%; text-decoration: none; color: inherit;">
+        <div style="position: relative; display: inline-block; width: 100%;">
+          <img src="https://img.youtube.com/vi/yndgbgnCi90/hqdefault.jpg" alt="YouTube video thumbnail" style="width: 100%; display: block; border: none; border-radius: 8px;" />
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
+            <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
+          </div>
+        </div>
+        <div style="padding: 8px 0; text-align: center; font-weight: 700;">Les moments forts de LMDP 2024</div>
       </a>
     </div>
 
-    <div id="section-1" style="color: white;">Contexte</div>
+
     <div class="lmdp-sections" style="background-color: azure;">
       <div style="margin-left: 5%; margin-right: 5%;">
-        <h3 style="text-align: center;">Qu'est-ce que La Mela des Plats (LMDP) ?</h3>
+        <h3 style="text-align: center;">Qu’est-ce que La Mela des Plats (LMDP) ?</h3>
         <div>
-          <p>L'idée du LMDP est née dans le cadre du concours « L'Occitanie ouverte sur le monde », dont Asso. ICT a été l'un des gagnants, et a été parrainé par le gouvernement local pour organiser la première édition en 2022. L'événement a vu défiler près de 800 personnes de France, d'Inde et du monde entier, marquant un début populaire et réussi, établissant une référence pour les éditions biennales à venir.</p>
-          <p>LMDP 2024 est un événement gastro-culturel où les saveurs de la cuisine indienne rencontrent les produits français locaux. Il rassemble la nourriture, la culture et les traditions de l'Inde dans un cadre dynamique et interactif, pour offrir au public une expérience unique et jamais vue auparavant. Nous visons à créer un environnement immersif qui non seulement excite les papilles gustatives, mais éduque également les participants sur l'importance d'intégrer des pratiques alimentaires saines dans leurs modes de vie.</p>
-          <p>La Mela des Plats participe au « Mois du Monde 2024 » de Marie de Toulouse dont la devise est de rassembler des personnes de différentes ethnies à travers la nourriture.</p>
+          <p>La Mela des Plats (LMDP) est le festival culinaire et culturel phare de l’association Indian Community
+Toulouse, créé pour mettre en valeur le riche patrimoine de l’Inde à travers la gastronomie, la culture et les
+arts. Depuis 2022, il s’est imposé comme le plus grand festival de cuisine indienne du sud de la France,
+reflétant un engagement en faveur des échanges culturels, de l’inclusion et du partage d’expériences.</p>
+
+          <p>La Mela des Plats trouve ses origines dans le projet primé « Occitanie ouverte sur le monde – 2021 », né
+d’une idée simple : faire découvrir les saveurs authentiques de l’Inde aux foyers français en utilisant des
+ingrédients locaux. Ce qui n’était au départ qu’un concept est aujourd’hui devenu une grande fête
+biennale.</p>
+
+          <p>La Mela des Plats #3 est fière de participer au programme « Mois du Monde 2026 » de la Mairie de Toulouse.</p>
+          
+          <p style="font-style: italic; color: #F15AA8; font-weight: 700; margin-bottom: -30px !important;">La Mela des Plats est bien plus qu'un simple festival gastronomique : c'est un catalyseur d'innovation
+culinaire et un témoignage de l'amitié durable qui lie deux nations - France et Inde.</p>
         </div>
 
-        <div class="row" style="display: flex; justify-content: space-between;">
-          <div class="blue-patch"> 
-            <ul style="min-height:170px">
-              <span style="font-weight: bold;">Une occasion à ne pas manquer pour :</span> 
-              <li>découvrir la cuisine indienne et le savoir-faire de ses cuisiniers !</li>
-              <li>rencontrer d'autres traditions et une autre culture !</li>
-              <li>vous amuser en participant à la célébration de festivals indiens</li>
-              <li>vivre un week-end mémorable !</li>
-              <p>Ne tarder pas à vous faire connaître !</p>
-            </ul>
-            <div style="display: flex; justify-content: center;">
-              <a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/lmdp-inscription-registration-2" target="_blank" style="text-decoration: none;" class="col-md-4">
-                <input type="submit" class="btn btn-primary d-block w-100 img-fluid" style="padding: 8px 0px !important;background: #F15AA8;" value="S'inscrire">
-              </a>
+      </div>
+    </div>
+
+    <div class="lmdp-sections">
+      <div style="margin-left: 5%; margin-right: 5%;">
+        <h3 style="text-align: center;">Le programme</h3>
+
+
+      <!-- WORKSHOP 1: STREET FOOD PAVILION -->
+      <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">Alimentation de rue - Marché</h3>
+        <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
+          Le marché propose une sélection de stands interactifs qui reflètent la diversité culinaire de l'Inde. Chaque stand met en avant des spécialités régionales authentiques de la
+cuisine de rue, préparées et présentées par des bénévoles originaires de ces régions, garantissant ainsi l'authenticité des saveurs. Les visiteurs peuvent se déplacer
+librement dans le marché, échanger directement avec les bénévoles et découvrir les ingrédients, les techniques de préparation et le contexte culturel de chaque plat.
+        </p>
+        
+        <!-- Mobile Carousel -->
+        <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="marketplace">
+          <div><img src="./img/LMDP/workshops/marketplace/1.jpeg" alt="Street food 1" /></div>
+          <div><img src="./img/LMDP/workshops/marketplace/2.jpeg" alt="Street food 2" /></div>
+          <div><img src="./img/LMDP/workshops/marketplace/3.jpeg" alt="Street food 3" /></div>
+        </div>
+        
+        <!-- Desktop Grid -->
+        <div class="workshop-images">
+          <img src="./img/LMDP/workshops/marketplace/1.jpeg" alt="Street food 1" />
+          <img src="./img/LMDP/workshops/marketplace/2.jpeg" alt="Street food 2" />
+          <img src="./img/LMDP/workshops/marketplace/3.jpeg" alt="Street food 3" />
+        </div>
+      </div>
+
+      <!-- WORKSHOP 2: COOKING WORKSHOP -->
+      <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">Ateliers culinaires et démonstrations</h3>
+        <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
+          Élément clé de La Mela des Plats, cet atelier transforme le festival d’un simple événement de dégustation en une expérience culinaire captivante. Conçu pour les
+participants curieux et passionnés, il propose un apprentissage pratique de la cuisine indienne authentique et une initiation aux diverses cuisines régionales de l’Inde.
+        </p>
+        <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
+          Animée par des bénévoles expérimentés, cette session guide les participants à travers la préparation des recettes, l'utilisation des épices, le choix des ingrédients et les
+techniques de cuisine essentielles, offrant ainsi une expérience à la fois instructive et pratique. Organisé deux semaines avant le festival principal, cet atelier constitue
+également un temps fort promotionnel en amont de l'événement.
+        </p>
+        
+        <!-- Mobile Carousel -->
+        <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="cooking">
+          <div><img src="./img/LMDP/workshops/cooking_workshop/1.jpeg" alt="Workshop 1" /></div>
+          <div><img src="./img/LMDP/workshops/cooking_workshop/2.jpeg" alt="Workshop 2" /></div>
+          <div><img src="./img/LMDP/workshops/cooking_workshop/3.jpeg" alt="Workshop 3" /></div>
+        </div>
+        
+        <!-- Desktop Grid -->
+        <div class="workshop-images">
+          <img src="./img/LMDP/workshops/cooking_workshop/1.jpeg" alt="Workshop 1" />
+          <img src="./img/LMDP/workshops/cooking_workshop/2.jpeg" alt="Workshop 2" />
+          <img src="./img/LMDP/workshops/cooking_workshop/3.jpeg" alt="Workshop 3" />
+        </div>
+      </div>
+
+      <!-- WORKSHOP 3: CULTURAL STAGE -->
+      <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">CScène culturelle</h3>
+        <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
+          Cette section rassemble des traditions musicales, chorégraphiques et scéniques venues de toute l'Inde, offrant au public une expérience culturelle vivante et captivante qui
+vient compléter le parcours gastronomique du festival.
+        </p>
+        <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
+          Les artistes et les interprètes locaux représentent diverses régions de l'Inde, reflétant ainsi la diversité culturelle du pays et ses traditions narratives. Chaque spectacle
+revêt une importance culturelle, permettant au public d'apprécier l'histoire, le symbolisme et l'identité régionale inhérents aux formes d'art indiennes.
+        </p>
+        
+        <!-- Mobile Carousel -->
+        <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="cultural">
+          <div><img src="./img/LMDP/workshops/cultural/1.jpeg" alt="Cultural 1" /></div>
+          <div><img src="./img/LMDP/workshops/cultural/2.jpeg" alt="Cultural 2" /></div>
+          <div><img src="./img/LMDP/workshops/cultural/3.jpeg" alt="Cultural 3" /></div>
+        </div>
+        
+        <!-- Desktop Grid -->
+        <div class="workshop-images">
+          <img src="./img/LMDP/workshops/cultural/1.jpeg" alt="Cultural 1" />
+          <img src="./img/LMDP/workshops/cultural/2.jpeg" alt="Cultural 2" />
+          <img src="./img/LMDP/workshops/cultural/3.jpeg" alt="Cultural 3" />
+        </div>
+      </div>
+
+      <!-- WORKSHOP 4: ART CORNER -->
+      <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">Art Pavillion (Atelier Kala)</h3>
+        <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
+          Le Pavillon des Arts est un espace dédié à la découverte culturelle, proposant des ateliers pratiques destinés à faire découvrir l’artisanat traditionnel indien au public français et à la jeune diaspora indienne. À travers des
+activités telles que la peinture Warli, la fabrication de lanternes et des démonstrations de mudras, les participants se familiarisent directement avec la patience et la précision qui caractérisent nos formes d’art ancestrales.
+Ces séances sont conçues pour être à la fois éducatives et propices à la méditation, favorisant ainsi une appréciation plus profonde de l’héritage du « Handmade in India » et de sa signification symbolique.
+        </p>
+        
+        <!-- Mobile Carousel -->
+        <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="arts">
+          <div><img src="./img/LMDP/workshops/arts/1.jpeg" alt="Art 1" /></div>
+          <div><img src="./img/LMDP/workshops/arts/2.jpeg" alt="Art 2" /></div>
+        </div>
+        
+        <!-- Desktop Grid -->
+        <div class="workshop-images">
+          <img src="./img/LMDP/workshops/arts/1.jpeg" alt="Art 1" />
+          <img src="./img/LMDP/workshops/arts/2.jpeg" alt="Art 2" />
+        </div>
+      </div>
+
+      <!-- WORKSHOP 5: FUN CORNERS -->
+      <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">L'espace ludique</h3>
+        <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
+          Le « Fun Corner » a été conçu pour recréer l’atmosphère joyeuse et inclusive d’une « Mela » indienne. Cet espace met l’accent sur le renforcement des liens communautaires à
+travers des jeux traditionnels et des activités interactives qui transcendent les barrières linguistiques. En offrant un lieu où les familles peuvent se retrouver et où les visiteurs
+peuvent découvrir le côté festif de la vie sociale indienne, le « Fun Corner » veille à ce que le festival reste un environnement accueillant et familial. Il rappelle que la culture
+indienne ne se résume pas à son histoire et à sa gastronomie, mais réside également dans son esprit ludique, de convivialité et de joie partagée.
+        </p>
+        
+        <!-- Mobile Carousel -->
+        <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="fun">
+          <div><img src="./img/LMDP/workshops/fun/1.jpeg" alt="Fun 1" /></div>
+          <div><img src="./img/LMDP/workshops/fun/2.jpeg" alt="Fun 2" /></div>
+        </div>
+        
+        <!-- Desktop Grid -->
+        <div class="workshop-images">
+          <img src="./img/LMDP/workshops/fun/1.jpeg" alt="Fun 1" />
+          <img src="./img/LMDP/workshops/fun/2.jpeg" alt="Fun 2" />
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <!-- VOLUNTEER SECTION -->
+    <h3 id="volunteer-section-french" style="text-align: center; scroll-margin-top: 80px; margin-top: -30px; margin-bottom: 20px;">Vous êtes déjà partenaire, vous êtes un traiteur, un professionnel de l’alimentation,
+et vous souhaitez nous aider ?</h3>
+    <div class="lmdp-sections" style="padding-top: 0px !important; margin-top: 0px !important;">
+      <div style="margin-left: 5%; margin-right: 5%;">
+        <div data-aos="fade-right">
+          <p style="color: #333; font-size: 15px; line-height: 1.8;">
+            ‘« La Mela Des Plats » est un festival gastronomique, un week-end auquel participeront les masses en Occitanie
+et dans les régions françaises environnantes. Venez contribuer au succès de ce spectacle culturel et
+gastronomique. Avec une fréquentation attendue entre 500 et 750 personnes, l’événement ouvre des
+opportunités et des marchés plus larges à vos produits / services. Nos forfaits de parrainage peuvent être
+personnalisés pour s’adapter à vos préférences, vous permettant d’accéder à notre base d’audience. Notre
+équipe se fera un plaisir de discuter avec vous.
+          </p>
+        </div>
+
+        <p style="color: #333; font-size: 25px; line-height: 1.8; margin-top: 20px; font-weight: 700;">
+          Pour participer, merci de remplir ce formulaire !
+        </p>
+        
+        <div class="row">
+          <form class="col-md-6" action="https://formsubmit.co/contact@indiancommunitytoulouse.org" method="POST">
+            <div class="row">
+              <div class="col-md-12 form-group img-fluid">
+                <input type="text" name="name" class="form-control" placeholder="Nom | Nom de l'organisation" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group img-fluid" style="border-radius: 8px !important">
+                <input type="email" class="form-control" placeholder="Email" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group img-fluid" style="border-radius: 8px !important">
+                <input type="number" class="form-control" placeholder="Phone" name="Phone" id="phone" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-12 form-group img-fluid" style="border-radius: 8px !important">
+                <input type="text" class="form-control" placeholder="Sujet: Je veux être" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-12 form-group img-fluid" style="border-radius: 8px !important">
+                <textarea class="form-control" placeholder="Message" name="message" id="message" cols="20" rows="6" data-rule="required" data-msg="Please write something for us"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="submit" class="btn btn-primary d-block w-100 img-fluid" value="Send Message">
+              </div>
             </div>
-          </div>
-          <div class="blue-patch">
-            <ul style="min-height:170px">
-              <li>Vous souhaitez soutenir « La Mela des Plats », le grand évènement culinaire indien en Occitanie, dans la prochaine période ?</li> 
-              <li>Vous pouvez faire un don, qui nous permettra de faire connaître la cuisine indienne et notre culture, avec la possibilité, pour vous, de bénéficier d'une déduction fiscale.</li>
-              <li>Obtenez également des déductions fiscales pour votre don</li>
-            </ul>
-            <div style="display: flex; justify-content: center;">
-              <a href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/4" target="_blank" style="text-decoration: none;" class="col-md-4">
-                <input type="submit" class="btn btn-primary d-block w-100 img-fluid" style="padding: 8px 0px !important;background: #F15AA8;" value="Faire un don">
-              </a>
-            </div>
+          </form>
+          <div class="col-md-6" style="padding: 20px;">
+            <p style="color: #333; font-size: 14px; line-height: 1.8;">
+              <strong>Lieu:</strong><br><br>
+              <strong>Atelier de Cuisine</strong><br>
+              Date: 30 Mai 2026<br>
+              Heure: 17h00 -21h00<br>
+              Lieu: La Classe des Gourmands, Port de l'embouchure, 31200 Toulouse<br><br>
+
+              <strong>Festival de la nourriture</strong><br>
+              Date: 07 Juin 2026<br>
+              Heure: 15h00 - 19h00<br>
+              Lieu: Salle des fêtes de Lafourguette, 28 Rue de Gironis, 31100 Toulouse<br>
+            </p>
           </div>
         </div>
       </div>
     </div>
-
-    <div id="section-2" style="color: white;">Programme</div>
-    <div class="lmdp-sections">
-      <div style="margin-left: 5%; margin-right: 5%;">
-        <h3 style="text-align: center;">Le programme</h3>
-        <div class="row">
-          <div style="margin-top: 20px">
-            <p>Goûtez à différentes spécialités authentiques du Nord au Sud, de l'Est à l'Ouest; de la vaste diversité culinaire de l'Inde. Quoi de plus? Vous obtenez de vous immerger dans les couleurs et la musique de notre Inde incroyable, tout en vous immergeant dans les couleurs et la musique de l'Inde.</p>
-            <p>Vous trouverez sur place, dans une ambiance de marché, des stands alimentaires, artisanaux, associatifs, une aire de jeux pour les enfants et des activités culturelles.</p>
-            <p>C'est l'occasion de se connecter avec la foule dynamique toulousaine et vos compatriotes indiens en France, de découvrir leur mode de vie, de développer votre réseau et d'échanger des perspectives créatives. Le jour de l'événement, vous avez une gamme d'ateliers, de conférences sur la nourriture et le yoga à bénéficier, tout en étant témoin des performances culturelles exubérantes, des jeux, de la musique, de la danse et plus encore!</p>
-          </div>
-        </div>
-
-        <h3 style="text-align: center; margin-top: 40px; color: #F15AA8;">Programme des Ateliers</h3>
-
-        <!-- WORKSHOP 1: STREET FOOD PAVILION - FRENCH -->
-        <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-          <h3 style="color: #F15AA8; margin-bottom: 15px;">Pavillon de la Gastronomie de Rue</h3>
-          <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
-            Au cœur du festival se trouve une marché dynamique composé de stands alimentaires gérés par des bénévoles, où des bénévoles passionnés présentent des mets authentiques indiens issus de leurs traditions régionales. Les visiteurs peuvent circuler librement sur le marché, s'engager directement avec les bénévoles et en apprendre davantage sur les ingrédients, les techniques de préparation et le contexte culturel de chaque plat.
-          </p>
-          
-          <!-- Mobile Carousel -->
-          <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="marketplace">
-            <div><img src="./img/LMDP/workshops/marketplace/1.jpeg" alt="Street food 1" /></div>
-            <div><img src="./img/LMDP/workshops/marketplace/2.jpeg" alt="Street food 2" /></div>
-            <div><img src="./img/LMDP/workshops/marketplace/3.jpeg" alt="Street food 3" /></div>
-          </div>
-          
-          <!-- Desktop Grid -->
-          <div class="workshop-images">
-            <img src="./img/LMDP/workshops/marketplace/1.jpeg" alt="Street food 1" />
-            <img src="./img/LMDP/workshops/marketplace/2.jpeg" alt="Street food 2" />
-            <img src="./img/LMDP/workshops/marketplace/3.jpeg" alt="Street food 3" />
-          </div>
-        </div>
-
-        <!-- WORKSHOP 2: COOKING WORKSHOP - FRENCH -->
-        <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-          <h3 style="color: #F15AA8; margin-bottom: 15px;">Atelier de Cuisine &amp; Démonstrations</h3>
-          <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
-            Un élément signature de La Mela des Plats, l'atelier transforme le festival d'un simple événement de dégustation en une expérience culinaire engageante. Conçu pour les participants curieux et enthousiastes, il offre un apprentissage pratique de la cuisine indienne authentique et une introduction aux cuisines régionales diverses de l'Inde.
-          </p>
-          <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
-            Dirigée par des bénévoles compétents, la session guide les participants à travers la préparation des recettes, l'utilisation des épices, la sélection des ingrédients et les techniques de cuisson essentielles, rendant l'expérience à la fois éducative et pratique. Organisé deux semaines avant le festival principal, cet atelier sert également d'attraction promotionnelle menant jusqu'à l'événement.
-          </p>
-          
-          <!-- Mobile Carousel -->
-          <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="cooking">
-            <div><img src="./img/LMDP/workshops/cooking_workshop/1.jpeg" alt="Workshop 1" /></div>
-            <div><img src="./img/LMDP/workshops/cooking_workshop/2.jpeg" alt="Workshop 2" /></div>
-            <div><img src="./img/LMDP/workshops/cooking_workshop/3.jpeg" alt="Workshop 3" /></div>
-          </div>
-          
-          <!-- Desktop Grid -->
-          <div class="workshop-images">
-            <img src="./img/LMDP/workshops/cooking_workshop/1.jpeg" alt="Workshop 1" />
-            <img src="./img/LMDP/workshops/cooking_workshop/2.jpeg" alt="Workshop 2" />
-            <img src="./img/LMDP/workshops/cooking_workshop/3.jpeg" alt="Workshop 3" />
-          </div>
-        </div>
-
-        <!-- WORKSHOP 3: CULTURAL STAGE - FRENCH -->
-        <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-          <h3 style="color: #F15AA8; margin-bottom: 15px;">Scène Culturelle</h3>
-          <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
-            Ce segment réunit la musique, la danse et d'autres traditions de performance de toute l'Inde, offrant au public une expérience culturelle vibrant et engageante qui complète le voyage culinaire du festival.
-          </p>
-          <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
-            Les artistes et les interprètes communautaires représentent diverses régions de l'Inde, reflétant la diversité culturelle du pays et les traditions de contage. Chaque performance revêt une importance culturelle, permettant au public d'apprécier l'histoire, le symbolisme et l'identité régionale intégrés aux formes d'art indiennes.
-          </p>
-          
-          <!-- Mobile Carousel -->
-          <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="cultural">
-            <div><img src="./img/LMDP/workshops/cultural/1.jpeg" alt="Cultural 1" /></div>
-            <div><img src="./img/LMDP/workshops/cultural/2.jpeg" alt="Cultural 2" /></div>
-            <div><img src="./img/LMDP/workshops/cultural/3.jpeg" alt="Cultural 3" /></div>
-          </div>
-          
-          <!-- Desktop Grid -->
-          <div class="workshop-images">
-            <img src="./img/LMDP/workshops/cultural/1.jpeg" alt="Cultural 1" />
-            <img src="./img/LMDP/workshops/cultural/2.jpeg" alt="Cultural 2" />
-            <img src="./img/LMDP/workshops/cultural/3.jpeg" alt="Cultural 3" />
-          </div>
-        </div>
-
-        <!-- WORKSHOP 4: ART CORNER - FRENCH -->
-        <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-          <h3 style="color: #F15AA8; margin-bottom: 15px;">Coin de l'Art</h3>
-          <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
-            Ce Pavillon est un espace dédié à la découverte culturelle, offrant des ateliers pratiques qui introduisent le public français et la jeune diaspora indienne à l'artisanat traditionnel de l'Inde. Nos bénévoles sont des étudiants et de jeunes professionnels des secteurs aérospatial et technologique à Toulouse. Grâce à des activités telles que la peinture Warli, la fabrication de lanternes et les démonstrations de Mudra, les participants s'engagent directement avec la patience et la précision derrière nos formes d'art anciennes. Ces sessions sont conçues pour être éducatives et méditat ives, favorisant une appréciation plus profonde de l'héritage « Handmade in India » et des significations symboliques derrière l'art folklorique régional.
-          </p>
-          
-          <!-- Mobile Carousel -->
-          <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="arts">
-            <div><img src="./img/LMDP/workshops/arts/1.jpeg" alt="Art 1" /></div>
-            <div><img src="./img/LMDP/workshops/arts/2.jpeg" alt="Art 2" /></div>
-            <div><img src="./img/LMDP/workshops/arts/3.jpeg" alt="Art 3" /></div>
-          </div>
-          
-          <!-- Desktop Grid -->
-          <div class="workshop-images">
-            <img src="./img/LMDP/workshops/arts/1.jpeg" alt="Art 1" />
-            <img src="./img/LMDP/workshops/arts/2.jpeg" alt="Art 2" />
-            <img src="./img/LMDP/workshops/arts/3.jpeg" alt="Art 3" />
-          </div>
-        </div>
-
-        <!-- WORKSHOP 5: FUN CORNERS - FRENCH -->
-        <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-          <h3 style="color: #F15AA8; margin-bottom: 15px;">Coins de Divertissement (Khel-Mel)</h3>
-          <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
-            Le Coin de Divertissement est conçu pour recréer l'atmosphère joyeuse et inclusive d'une « Mela » indienne. Ce segment se concentre sur le rapprochement communautaire par le biais de jeux traditionnels et d'activités interactives qui transcendent les barrières linguistiques. En fournissant un espace permettant aux familles de se connecter et aux visiteurs d'expérimenter le côté léger de la vie sociale indienne, le Coin de Divertissement assure que le festival reste un environnement accueillant et familial. Il rappelle que la culture indienne ne se trouve pas seulement dans son histoire et sa nourriture, mais aussi dans son esprit de jeu, de togetherness et de joie partagée.
-          </p>
-          
-          <!-- Mobile Carousel -->
-          <div class="workshop-carousel owl-carousel owl-theme" data-carousel-name="fun">
-            <div><img src="./img/LMDP/workshops/fun/1.jpeg" alt="Fun 1" /></div>
-            <div><img src="./img/LMDP/workshops/fun/2.jpeg" alt="Fun 2" /></div>
-            <div><img src="./img/LMDP/workshops/fun/3.jpeg" alt="Fun 3" /></div>
-          </div>
-          
-          <!-- Desktop Grid -->
-          <div class="workshop-images">
-            <img src="./img/LMDP/workshops/fun/1.jpeg" alt="Fun 1" />
-            <img src="./img/LMDP/workshops/fun/2.jpeg" alt="Fun 2" />
-            <img src="./img/LMDP/workshops/fun/3.jpeg" alt="Fun 3" />
-          </div>
-        </div>
-
-        </div>
-      </div>
-
-      <div id="section-3" style="color: white;">Informations Pratiques</div>
-      <div class="lmdp-sections" style="padding-bottom: 40px;">
-        <div style="margin-left: 5%; margin-right: 5%;">
-          <h3 style="text-align: center;">Informations Pratiques</h3>
-          <p style="text-align: center; padding: 20px; color: #333;">
-            Pour plus de détails sur les dates, le lieu, les billets et l'inscription, veuillez visiter notre site web ou nous contacter directement.
-          </p>
-        </div>
-      </div>
-
-      <!-- VOLUNTEER SECTION - FRENCH -->
-      <h3 id="volunteer-section-french" style="text-align: center; scroll-margin-top: 80px; margin-top: -30px; margin-bottom: 20px;">Êtes-vous un Bénévole, Partenaire, Catéreur ou Sponsor?</h3>
-      <div class="lmdp-sections" style="padding-top: 0px !important; margin-top: 0px !important;">
-        <div style="margin-left: 5%; margin-right: 5%;">
-          <div data-aos="fade-right">
-            <p style="color: #333; font-size: 15px; line-height: 1.8;">
-              « La Mela Des Plats » est un festival gastronomique, un événement de fin de semaine qui sera fréquenté par les masses en Occitanie et dans les régions environnantes de France. Veuillez venir et contribuer au succès de cette extravagance culturelle et culinaire. Avec un flux prévu entre 500 à 750 personnes, l'événement ouvre des opportunités et des marchés plus larges pour vos produits / services. Nos forfaits de parrainage peuvent être personnalisés pour s'adapter à vos préférences, vous permettant d'accéder à notre base d'audience. Notre équipe se fera un plaisir de discuter davantage avec vous.
-            </p>
-          </div>
-          
-          <p style="color: #333; font-size: 15px; line-height: 1.8; text-align: center; margin-top: 20px; font-weight: 700;">
-            Contactez-nous pour plus d'informations
-          </p>
-          
-          <div class="row">
-            <form class="col-md-6" action="https://formsubmit.co/contact@indiancommunitytoulouse.org" method="POST">
-              <div class="row">
-                <div class="col-md-12 form-group img-fluid">
-                  <input type="text" name="name" class="form-control" placeholder="Nom | Nom de l'Organisation" id="name" data-rule="minlen:4" data-msg="Veuillez entrer au moins 4 caractères" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-6 form-group img-fluid" style="border-radius: 8px !important">
-                  <input type="email" class="form-control" placeholder="Email" name="email" id="email" data-rule="email" data-msg="Veuillez entrer un email valide" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-6 form-group img-fluid" style="border-radius: 8px !important">
-                  <input type="number" class="form-control" placeholder="Téléphone" name="Phone" id="phone" data-rule="minlen:4" data-msg="Veuillez entrer au moins 8 caractères" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-12 form-group img-fluid" style="border-radius: 8px !important">
-                  <input type="text" class="form-control" placeholder="Sujet: Je veux être" name="subject" id="subject" data-rule="minlen:4" data-msg="Veuillez entrer au moins 8 caractères" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-12 form-group img-fluid" style="border-radius: 8px !important">
-                  <textarea class="form-control" placeholder="Message" name="message" id="message" cols="20" rows="6" data-rule="required" data-msg="Veuillez écrire quelque chose pour nous"></textarea>
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="submit" class="btn btn-primary d-block w-100 img-fluid" value="Envoyer le Message">
-                </div>
-              </div>
-            </form>
-            <div class="col-md-6" style="padding: 20px;">
-              <p style="color: #333; font-size: 14px; line-height: 1.8;">
-                <strong>Contactez-nous:</strong><br>
-                Email: contact@indiancommunitytoulouse.org<br>
-                Téléphone: +33 (contactez votre représentant local)<br><br>
-                Nous attendons avec impatience de nous associer à vous pour faire de La Mela des Plats une expérience mémorable!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <!-- COLLABORATIONS SECTION - FRENCH -->
     <div class="lmdp-sections" style="border-top:2px solid #ededed; padding-top: 20px;">
@@ -812,30 +806,27 @@
           <h3 style="text-align: center;">Collaborations</h3>
         </div>
         
-        <div class="row" style="margin: 40px; display: block !important;">
+        <div class="row" style="margin: 20px; display: block !important;">
           <div style="display: flex;">
             <div class="col-md-4" style="display: flex; justify-content: flex-end;">
               <div class="col-md-6" style="text-align: center;">
-                <h5 class="event-heading" style="font-size: 18px !important; font-family: IcoFont; font-style: italic; margin-bottom: 20px;">Organisateurs</h5>
-                <img src="icons/ICT full.jpg" style="width: 55%; height: auto;" alt="Organisateurs"/>
+                <h5 class="event-heading" style="font-size: 18px !important; font-family: IcoFont; font-style: italic; margin-bottom: 20px;">Organisé par</h5>
+                <img src="icons/ICT full.jpg" style="width: 55%; height: auto;" alt="Organized by"/>
               </div>
             </div>
             <div class="col-md-7 col-sm-12" style="display: block; justify-content: center;">
-              <h5 class="col-md-12 col-sm-12 event-heading" style="font-size: 18px !important; font-family: IcoFont; font-style: italic; text-align: center; margin-bottom: 20px;">Avec la collaboration de</h5>
+              <h5 class="col-md-12 col-sm-12 event-heading" style="font-size: 18px !important; font-family: IcoFont; font-style: italic; text-align: center; margin-bottom: 20px;">En collaboration avec</h5>
               <div style="display: flex; justify-content: center;">
                 <div class="col-md-4 col-sm-12" style="text-align: center;">
-                  <img src="icons/toulouse-marie.jpeg" style="width: 45%; height: auto;" alt="Toulouse Marie"/>
-                </div>
-                <div class="col-md-4 col-sm-12" style="text-align: center;">
-                  <img src="icons/embassy.jpeg" style="width: 110%; height: auto;" alt="Embassy"/>
+                  <img src="icons/toulouse-marie.png" style="width: 45%; height: auto;" alt="Toulouse Marie"/>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row" style="margin: 40px; display: block !important;">
-          <h5 class="event-heading" style="font-size: 18px !important; font-family: IcoFont; margin-bottom:10px;margin-top:10px;font-style: italic; text-align: center;">Sponsors</h5>
+        <div class="row" style="margin: 20px; display: block !important;">
+          <h5 class="event-heading" style="font-size: 18px !important; font-family: IcoFont; margin-bottom:10px;margin-top:10px;font-style: italic; text-align: center;">Commanditaires</h5>
           <div style="display: flex; justify-content: center; flex-wrap: wrap;">
             <div class="col-md-2" style="text-align: center; margin: 10px;">
               <img src="img/LMDP/sponsors/Annachi.jpg" style="max-width: 90%; height: auto;" alt="Sponsor"/>
@@ -953,38 +944,117 @@
   <script src="js/main-new.js"></script>
 
   <script>
-    // Dropdown functionality for Registration menu
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        const menu = this.nextElementSibling;
-        // Close all other dropdowns
-        document.querySelectorAll('.dropdown-menu').forEach(m => {
-          if (m !== menu) m.style.display = 'none';
+    // Language change function
+    function languageChange(event, lang) {
+      event.preventDefault();
+      
+      // Get elements
+      const englishContent = document.getElementById('english');
+      const frenchContent = document.getElementById('french');
+      const englishMenu = document.getElementById('english-menu');
+      const frenchMenu = document.getElementById('french-menu');
+      const englishButton = document.getElementById('english-button');
+      const frenchButton = document.getElementById('french-button');
+      const englishBanners = document.querySelectorAll('.english-banner');
+      const frenchBanners = document.querySelectorAll('.french-banner');
+      
+      if (lang === 'english') {
+        // Show English
+        if (englishContent) englishContent.style.display = 'block';
+        if (frenchContent) frenchContent.style.display = 'none';
+        if (englishMenu) englishMenu.style.display = 'flex';
+        if (frenchMenu) frenchMenu.style.display = 'none';
+        if (englishButton) {
+          englishButton.style.opacity = '1';
+          englishButton.style.pointerEvents = 'auto';
+        }
+        if (frenchButton) {
+          frenchButton.style.opacity = '0.5';
+          frenchButton.style.pointerEvents = 'none';
+        }
+        englishBanners.forEach(banner => banner.style.display = 'block');
+        frenchBanners.forEach(banner => banner.style.display = 'none');
+        
+        // Update flag opacity
+        document.querySelectorAll('[onclick*="english"]').forEach(flag => {
+          flag.style.opacity = '1';
+          flag.style.pointerEvents = 'auto';
+          flag.style.cursor = 'pointer';
         });
-        // Toggle current dropdown
-        menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-          menu.style.display = 'none';
+        document.querySelectorAll('[onclick*="french"]').forEach(flag => {
+          flag.style.opacity = '0.5';
+          flag.style.pointerEvents = 'none';
+        });
+      } else if (lang === 'french') {
+        // Show French
+        if (englishContent) englishContent.style.display = 'none';
+        if (frenchContent) frenchContent.style.display = 'block';
+        if (englishMenu) englishMenu.style.display = 'none';
+        if (frenchMenu) frenchMenu.style.display = 'flex';
+        if (englishButton) {
+          englishButton.style.opacity = '0.5';
+          englishButton.style.pointerEvents = 'none';
+        }
+        if (frenchButton) {
+          frenchButton.style.opacity = '1';
+          frenchButton.style.pointerEvents = 'auto';
+        }
+        englishBanners.forEach(banner => banner.style.display = 'none');
+        frenchBanners.forEach(banner => banner.style.display = 'block');
+        
+        // Update flag opacity
+        document.querySelectorAll('[onclick*="french"]').forEach(flag => {
+          flag.style.opacity = '1';
+          flag.style.pointerEvents = 'auto';
+          flag.style.cursor = 'pointer';
+        });
+        document.querySelectorAll('[onclick*="english"]').forEach(flag => {
+          flag.style.opacity = '0.5';
+          flag.style.pointerEvents = 'none';
         });
       }
-    });
+    }
 
-    // Close dropdown when clicking on a link (but prevent coming-soon links)
-    document.querySelectorAll('.dropdown-menu a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        // Prevent default for coming-soon links
-        if (this.classList.contains('coming-soon-link')) {
+    // Initialize French as default on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      languageChange(new Event('click'), 'french');
+      
+      // Setup dropdown functionality
+      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
           e.preventDefault();
-          return;
+          const menu = this.nextElementSibling;
+          if (menu && menu.classList.contains('dropdown-menu')) {
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown-menu').forEach(m => {
+              if (m !== menu) m.style.display = 'none';
+            });
+            // Toggle current dropdown
+            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+          }
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        const isDropdownToggle = e.target.closest('.dropdown-toggle');
+        if (!isDropdownToggle && !e.target.closest('.dropdown-menu')) {
+          document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.style.display = 'none';
+          });
         }
-        this.closest('.dropdown-menu').style.display = 'none';
+      });
+
+      // Close dropdown when clicking on a link
+      document.querySelectorAll('.dropdown-menu a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          if (this.classList.contains('coming-soon-link')) {
+            e.preventDefault();
+            return;
+          }
+          const menu = this.closest('.dropdown-menu');
+          if (menu) menu.style.display = 'none';
+        });
       });
     });
   </script>
