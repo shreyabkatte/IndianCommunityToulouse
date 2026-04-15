@@ -39,8 +39,9 @@
 
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
-  <!-- New LMDP CSS -->
   <link href="css/style-new.css" rel="stylesheet">
+  <!-- Banner CSS - Fresh System -->
+  <link href="css/banners.css" rel="stylesheet">
 
   <style>
     /* Tooltip styling for Coming Soon */
@@ -85,6 +86,10 @@
       opacity: 1;
     }
 
+    /* Pre-initialize: Set English content hidden by default */
+    #english {
+      display: none;
+    }
   </style>
 </head>
 
@@ -142,25 +147,26 @@
             </a>
           </div>
           
-          <div class="col-md-5 language-logos-web">
-             <img class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer;" width="17%" title="Version française"/> 
-             <img class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer; opacity: 0.5; pointer-events: none;" width="17%"/>
+          <div class="col-md-5 lmdp-language-logos-web">
+             <img id="lmdp-french-flag-web" class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer;" width="17%" title="Version française"/> 
+             <img id="lmdp-english-flag-web" class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer;" width="17%"/>
           </div>
         </div>
       </div>
   </header>
 
-  <div class="language-logos-mobile">
-    <img class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer" width="6%"/>  
-    <img class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer" width="6%"/>  
+  <div class="lmdp-language-logos-mobile">
+    <img id="lmdp-french-flag-mobile" class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer" width="6%"/>  
+    <img id="lmdp-english-flag-mobile" class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer" width="6%"/>  
   </div>
 
   <!-- Banner with Overlay Buttons -->
   <!-- <div style="position: relative; width: 100%; display: block;"> -->
-    <img class="logo-web french-banner" width="100%" src="img/LMDP/LMDP_2026_Web_French.png" alt="">
-    <img class="logo-mobile french-banner" width="100%" src="img/LMDP/LMDP_2026_Mobile_French.png" alt="">
-    <img class="logo-web english-banner" width="100%" src="img/LMDP/LMDP_2026_Web_English.png" alt="" style="display: none;">
-    <img class="logo-mobile english-banner" width="100%" src="img/LMDP/LMDP_2026_Mobile_English.png" alt="" style="display: none;">
+    <!-- TEMP FIX: Using mobile image for French web banner since Web_French.png is missing -->
+    <img id="lmdp-french-banner-web" class="lmdp-banner-web" width="100%" src="img/LMDP/LMDP_2026_Web_English.png" alt="French Banner Web">
+    <img id="lmdp-french-banner-mobile" class="lmdp-banner-mobile" width="100%" src="img/LMDP/LMDP_2026_Mobile_French.png" alt="French Banner Mobile">
+    <img id="lmdp-english-banner-web" class="lmdp-banner-web" width="100%" src="img/LMDP/LMDP_2026_Web_English.png" alt="English Banner Web">
+    <img id="lmdp-english-banner-mobile" class="lmdp-banner-mobile" width="100%" src="img/LMDP/LMDP_2026_Mobile_English.png" alt="English Banner Mobile">
     
     <!-- Buttons Overlay - Bottom Left -->
     <div style="position: absolute; bottom: 5px; left: 170px; display: flex; gap: 330px; z-index: 100; display: none !important;">
@@ -176,8 +182,6 @@
       </a>
     </div>
   <!-- </div> -->
-
-<div>
 
   <!-- ENGLISH SECTION -->
   <div id="english" class="lmdp-container english-content" style="display: none;">
@@ -944,26 +948,60 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
   <script src="js/main-new.js"></script>
 
   <script>
-    // Language change function
+    // Global language state
+    let currentLanguage = 'french'; // Default language
+
+    // Language change function - Clean system with banner IDs
     function languageChange(event, lang) {
-      event.preventDefault();
+      if (event) event.preventDefault();
       
-      // Get elements
+      // Store current language
+      currentLanguage = lang;
+      
+      console.log(`Language changed to: ${lang}, Screen: ${window.innerWidth >= 992 ? 'Desktop' : 'Mobile'}`);
+      
+      // Get content and menu elements
       const englishContent = document.getElementById('english');
       const frenchContent = document.getElementById('french');
       const englishMenu = document.getElementById('english-menu');
       const frenchMenu = document.getElementById('french-menu');
       const englishButton = document.getElementById('english-button');
       const frenchButton = document.getElementById('french-button');
-      const englishBanners = document.querySelectorAll('.english-banner');
-      const frenchBanners = document.querySelectorAll('.french-banner');
+      
+      // Get all banner elements with LMDP prefix
+      const frenchBannerWeb = document.getElementById('lmdp-french-banner-web');
+      const frenchBannerMobile = document.getElementById('lmdp-french-banner-mobile');
+      const englishBannerWeb = document.getElementById('lmdp-english-banner-web');
+      const englishBannerMobile = document.getElementById('lmdp-english-banner-mobile');
+      
+      // Get language flag elements
+      const frenchFlagWeb = document.getElementById('lmdp-french-flag-web');
+      const frenchFlagMobile = document.getElementById('lmdp-french-flag-mobile');
+      const englishFlagWeb = document.getElementById('lmdp-english-flag-web');
+      const englishFlagMobile = document.getElementById('lmdp-english-flag-mobile');
+      
+      // Determine screen size (responsive breakpoint: 992px)
+      const isDesktop = window.innerWidth >= 992;
+      
+      // Remove .active class from ALL banners
+      [frenchBannerWeb, frenchBannerMobile, englishBannerWeb, englishBannerMobile].forEach((banner, index) => {
+        if (banner) {
+          console.log(`Banner ${index} (${banner.id}): Removing .active class`);
+          console.log(`  Before: ${banner.className}`);
+          banner.classList.remove('active');
+          banner.style.removeProperty('display');
+          console.log(`  After: ${banner.className}`);
+        }
+      });
       
       if (lang === 'english') {
-        // Show English
+        // Show English content
         if (englishContent) englishContent.style.display = 'block';
         if (frenchContent) frenchContent.style.display = 'none';
         if (englishMenu) englishMenu.style.display = 'flex';
         if (frenchMenu) frenchMenu.style.display = 'none';
+        
+        // Update button states
         if (englishButton) {
           englishButton.style.opacity = '1';
           englishButton.style.pointerEvents = 'auto';
@@ -972,25 +1010,44 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           frenchButton.style.opacity = '0.5';
           frenchButton.style.pointerEvents = 'none';
         }
-        englishBanners.forEach(banner => banner.style.display = 'block');
-        frenchBanners.forEach(banner => banner.style.display = 'none');
         
-        // Update flag opacity
-        document.querySelectorAll('[onclick*="english"]').forEach(flag => {
-          flag.style.opacity = '1';
-          flag.style.pointerEvents = 'auto';
-          flag.style.cursor = 'pointer';
+        // Activate correct banner based on screen size
+        if (isDesktop) {
+          if (englishBannerWeb) {
+            englishBannerWeb.classList.add('active');
+            console.log('Adding .active to english-banner-web');
+          }
+        } else {
+          if (englishBannerMobile) {
+            englishBannerMobile.classList.add('active');
+            console.log('Adding .active to english-banner-mobile');
+          }
+        }
+        
+        // Update flag opacity and pointer-events - ALL FLAGS MUST BE CLICKABLE
+        [englishFlagWeb, englishFlagMobile].forEach(flag => {
+          if (flag) {
+            flag.style.opacity = '1';
+            flag.style.pointerEvents = 'auto';
+            flag.style.cursor = 'pointer';
+          }
         });
-        document.querySelectorAll('[onclick*="french"]').forEach(flag => {
-          flag.style.opacity = '0.5';
-          flag.style.pointerEvents = 'none';
+        [frenchFlagWeb, frenchFlagMobile].forEach(flag => {
+          if (flag) {
+            flag.style.opacity = '0.5';
+            flag.style.pointerEvents = 'auto'; // IMPORTANT: Keep clickable!
+            flag.style.cursor = 'pointer';
+          }
         });
       } else if (lang === 'french') {
-        // Show French
+        // Show French content
+        console.log('=== FRENCH LANGUAGE MODE ===');
         if (englishContent) englishContent.style.display = 'none';
         if (frenchContent) frenchContent.style.display = 'block';
         if (englishMenu) englishMenu.style.display = 'none';
         if (frenchMenu) frenchMenu.style.display = 'flex';
+        
+        // Update button states
         if (englishButton) {
           englishButton.style.opacity = '0.5';
           englishButton.style.pointerEvents = 'none';
@@ -999,27 +1056,58 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           frenchButton.style.opacity = '1';
           frenchButton.style.pointerEvents = 'auto';
         }
-        englishBanners.forEach(banner => banner.style.display = 'none');
-        frenchBanners.forEach(banner => banner.style.display = 'block');
         
-        // Update flag opacity
-        document.querySelectorAll('[onclick*="french"]').forEach(flag => {
-          flag.style.opacity = '1';
-          flag.style.pointerEvents = 'auto';
-          flag.style.cursor = 'pointer';
+        // Activate correct banner based on screen size
+        console.log('isDesktop:', isDesktop);
+        if (isDesktop) {
+          console.log('Desktop mode - Adding .active to french-banner-web');
+          if (frenchBannerWeb) {
+            frenchBannerWeb.classList.add('active');
+            console.log('French banner web classes after adding .active:', frenchBannerWeb.className);
+            console.log('French banner web computed style:', window.getComputedStyle(frenchBannerWeb).display);
+          }
+        } else {
+          console.log('Mobile mode - Adding .active to french-banner-mobile');
+          if (frenchBannerMobile) {
+            frenchBannerMobile.classList.add('active');
+            console.log('French banner mobile classes after adding .active:', frenchBannerMobile.className);
+            console.log('French banner mobile computed style:', window.getComputedStyle(frenchBannerMobile).display);
+          }
+        }
+        
+        // Update flag opacity and pointer-events - ALL FLAGS MUST BE CLICKABLE
+        [frenchFlagWeb, frenchFlagMobile].forEach(flag => {
+          if (flag) {
+            flag.style.opacity = '1';
+            flag.style.pointerEvents = 'auto';
+            flag.style.cursor = 'pointer';
+          }
         });
-        document.querySelectorAll('[onclick*="english"]').forEach(flag => {
-          flag.style.opacity = '0.5';
-          flag.style.pointerEvents = 'none';
+        [englishFlagWeb, englishFlagMobile].forEach(flag => {
+          if (flag) {
+            flag.style.opacity = '0.5';
+            flag.style.pointerEvents = 'auto'; // IMPORTANT: Keep clickable!
+            flag.style.cursor = 'pointer';
+          }
         });
       }
     }
+    
+    // Handle window resize to update banners based on screen size
+    window.addEventListener('resize', function() {
+      // Use global currentLanguage variable instead of checking button opacity
+      languageChange(null, currentLanguage);
+    });
 
     // Initialize French as default on page load
     document.addEventListener('DOMContentLoaded', function() {
-      languageChange(new Event('click'), 'french');
+      console.log('DOMContentLoaded event fired');
+      console.log('Initializing French language and banners immediately...');
       
-      // Setup dropdown functionality
+      // Call language change immediately without setTimeout
+      languageChange(null, 'french');
+      
+      // ...existing code...
       document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', function(e) {
           e.preventDefault();

@@ -1,0 +1,140 @@
+/* 
+  LMDP BANNER DISPLAY SYSTEM - FRESH SYSTEM
+  Each banner controlled independently based on language + screen size
+  Complete isolation from other CSS to prevent conflicts
+*/
+
+/* Base rules - Hide all banners by default and set sizing */
+#lmdp-french-banner-web,
+#lmdp-french-banner-mobile,
+#lmdp-english-banner-web,
+#lmdp-english-banner-mobile {
+  display: none !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: static !important;
+  object-fit: contain !important;
+}
+
+/* Desktop breakpoint (min-width: 992px) */
+@media (min-width: 992px) {
+  /* Hide ALL mobile banners on desktop */
+  #lmdp-french-banner-mobile,
+  #lmdp-english-banner-mobile {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Hide ALL web banners by default */
+  #lmdp-french-banner-web,
+  #lmdp-english-banner-web {
+    display: none !important;
+  }
+  
+  /* Show only active web banner */
+  #lmdp-french-banner-web.active,
+  #lmdp-english-banner-web.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Mobile breakpoint (max-width: 991px) */
+@media (max-width: 991px) {
+  /* Hide ALL web banners on mobile */
+  #lmdp-french-banner-web,
+  #lmdp-english-banner-web {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Hide ALL mobile banners by default */
+  #lmdp-french-banner-mobile,
+  #lmdp-english-banner-mobile {
+    display: none !important;
+  }
+  
+  /* Show only active mobile banner */
+  #lmdp-french-banner-mobile.active,
+  #lmdp-english-banner-mobile.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* ===== LMDP Language Logos Display ===== */
+
+/* Desktop: Show web language logos, hide mobile */
+.lmdp-language-logos-web {
+  text-align: end;
+  margin-right: 30px;
+  display: block !important;
+}
+
+.lmdp-language-logos-mobile {
+  display: none !important;
+}
+
+/* Mobile: Show mobile language logos, hide web */
+@media (max-width: 991px) {
+  .lmdp-language-logos-mobile {
+    display: block !important;
+    text-align: end;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+
+  .lmdp-language-logos-web {
+    display: none !important;
+  }
+}
+
+/* ===== Workshop Images Display ===== */
+
+/* Desktop: Show grid layout */
+/* .workshop-images {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+} */
+
+/* .workshop-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+} */
+
+/* Mobile: Hide grid, show carousel */
+/* @media (max-width: 991px) {
+  .workshop-images {
+    display: none !important;
+  }
+  
+  .workshop-carousel {
+    display: block !important;
+  }
+} */
+
+/* Desktop: Hide carousel, show grid */
+/* @media (min-width: 992px) {
+  .workshop-carousel {
+    display: none !important;
+  }
+  
+  .workshop-images {
+    display: grid !important;
+  }
+} */
