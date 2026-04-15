@@ -1820,7 +1820,7 @@ figure figcaption {
 }
 
 .lmdp-sections{
-  padding:60px 20px 100px 20px;
+  padding:40px 20px 50px 20px;
   /* margin-top: 50px; */
 }
 
@@ -2302,6 +2302,55 @@ figure figcaption {
     
   }
 
+  /* Workshop section headings for mobile */
+  div[style*="background-color: #f0f8ff"] h3 {
+    font-size: 16px !important;
+  }
+
+  div[style*="background-color: #f0f8ff"] p {
+    font-size: 12px !important;
+  }
+
+  /* About LMDP section headings for mobile */
+  div[style*="background-color: azure"] h3 {
+    font-size: 20px !important;
+  }
+
+  div[style*="background-color: azure"] p {
+    font-size: 14px !important;
+  }
+
+  /* Volunteer section heading and content for mobile */
+  h3[id*="volunteer"] {
+    font-size: 20px !important;
+    max-width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    line-height: 1.5 !important;
+  }
+
+  .lmdp-sections p {
+    font-size: 13px !important;
+  }
+
+  .lmdp-sections h3 {
+    font-size: 18px !important;
+  }
+
+  /* Volunteer section form width constraint on mobile */
+  .lmdp-sections .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .lmdp-sections .row > div {
+    padding: 10px !important;
+  }
+
+  .lmdp-sections .row .col-md-6 {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
 }
 
 /* New style */
