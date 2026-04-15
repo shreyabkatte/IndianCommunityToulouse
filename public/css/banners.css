@@ -138,3 +138,218 @@
     display: grid !important;
   }
 } */
+
+/* ===== LMDP Buttons Display (French & English) ===== */
+
+/* Parent container for buttons and flags */
+.lmdp-buttons-and-flags {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: nowrap !important;
+  width: auto !important;
+  min-height: auto !important;
+  visibility: visible !important;
+}
+
+/* Base: Hide buttons by default - NO !important to allow inline styles to override */
+#lmdp-english-button.lmdp-english-button,
+#lmdp-french-button.lmdp-french-button {
+  display: none;
+  visibility: visible !important;
+}
+
+.lmdp-buttons-container {
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 5px !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  visibility: visible !important;
+}
+
+.lmdp-language-button {
+  text-decoration: none !important;
+  transition: opacity 0.3s ease, transform 0.2s ease !important;
+  flex-shrink: 0 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.lmdp-language-button:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Extra small screens - xs (< 576px) */
+@media (max-width: 575px) {
+  .lmdp-buttons-and-flags {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 5px !important;
+  }
+  
+  .lmdp-buttons-container {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 5px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  #lmdp-english-button.lmdp-english-button,
+  #lmdp-french-button.lmdp-french-button {
+    display: inline-block !important;
+    margin: 0 3px !important;
+    visibility: visible !important;
+  }
+}
+
+/* Small screens - sm (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .lmdp-buttons-and-flags {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: flex-end !important;
+  }
+  
+  #lmdp-english-button.lmdp-english-button,
+  #lmdp-french-button.lmdp-french-button {
+    display: inline-block !important;
+    margin: 0 5px !important;
+    visibility: visible !important;
+  }
+  
+  .lmdp-buttons-container {
+    display: flex !important;
+    justify-content: flex-end !important;
+    width: auto !important;
+    gap: 5px !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+/* Medium screens - md (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .lmdp-buttons-and-flags {
+    display: flex !important;
+    width: auto !important;
+    justify-content: flex-end !important;
+  }
+  
+  #lmdp-english-button.lmdp-english-button,
+  #lmdp-french-button.lmdp-french-button {
+    display: inline-block !important;
+    margin: 0 5px !important;
+    visibility: visible !important;
+  }
+  
+  .lmdp-buttons-container {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    flex-wrap: nowrap !important;
+  }
+}
+
+/* Large screens - lg (992px and up) */
+@media (min-width: 992px) {
+  #lmdp-english-button.lmdp-english-button,
+  #lmdp-french-button.lmdp-french-button {
+    display: inline-block !important;
+    margin: 0 5px !important;
+    visibility: visible !important;
+  }
+  
+  .lmdp-buttons-container {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ===== Mobile Header Responsive Display ===== */
+
+/* Desktop: Show desktop header row, hide mobile header */
+@media (min-width: 992px) {
+  .lmdp-header-desktop {
+    display: flex !important;
+  }
+  
+  .lmdp-mobile-header {
+    display: none !important;
+  }
+}
+
+/* Mobile: Hide desktop header row, show mobile header */
+@media (max-width: 991px) {
+  .lmdp-header-desktop {
+    display: none !important;
+  }
+  
+  .lmdp-mobile-header {
+    display: block !important;
+  }
+  
+  .lmdp-language-logos-mobile {
+    display: none !important;
+  }
+}
+
+/* Mobile menu and dropdown styling */
+.lmdp-dropdown-menu {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.lmdp-mobile-menu {
+  animation: slideDown 0.2s ease-out;
+}
+
+.lmdp-mobile-menu-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile: Reduce font size for "Un voyage gastronomique" section */
+@media (max-width: 991px) {
+  /* Reduce heading size on mobile */
+  div[style*="display: flex; align-items: center; justify-content: center; gap: 20px"] h3 {
+    font-size: 18px !important;
+  }
+
+  /* Reduce SVG/flag sizes on mobile */
+  div[style*="display: flex; align-items: center; justify-content: center; gap: 20px"] svg {
+    width: 30px !important;
+    height: 15px !important;
+  }
+
+  /* Reduce paragraph font size for the gastronomique section */
+  p[style*="text-align: center; font-style: italic"] {
+    font-size: 12px !important;
+    margin: 8px 10% 6px !important;
+  }
+
+  /* Reduce first-para font size on mobile */
+  p.first-para {
+    font-size: 13px !important;
+  }
+
+  /* Reduce video title font size on mobile */
+  .lmdp-video-title {
+    font-size: 12px !important;
+  }
+}
+

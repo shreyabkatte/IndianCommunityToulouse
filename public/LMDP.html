@@ -101,7 +101,8 @@
     
 <div>
   <header class="site-navbar js-sticky-header site-navbar-target" role="banner" style="background: #ffffff;">
-      <div class="row align-items-center" style="flex-wrap: nowrap;">
+      <!-- Desktop Header Row -->
+      <div class="row align-items-center lmdp-header-desktop" style="flex-wrap: nowrap;">
         <div class="col-sm-3 col-md-1" style="margin-top : 10px ;display: flex;">
           <a href="index.html" class="site-logo" style="margin-left :30px">
             <img class="logo-web" width="70px" height="70px" src="./img/ict-logo.png" alt="">
@@ -137,20 +138,83 @@
             </nav>
           </div>
 
-        <div class="col-sm-9 col-md-5" style="display: flex !important;justify-content: flex-end;">
-          <div class="col-md-7" style="display: flex; justify-content: flex-end;">
-            <a  id="english-button" class="language-button english-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none;" >
+        <div class="col-sm-9 col-md-5 lmdp-buttons-and-flags" style="display: flex !important;justify-content: flex-end; align-items: center; gap: 10px; flex-wrap: nowrap;">
+          <!-- Buttons Container -->
+          <div class="lmdp-buttons-container" style="display: flex; justify-content: flex-end; gap: 5px; flex-wrap: nowrap;">
+            <a  id="lmdp-english-button" class="lmdp-language-button lmdp-english-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none;" >
               <input type="submit" class="btn btn-primary d-block w-45 img-fluid register-button" value="Donate">
             </a>
-            <a  id="french-button" class="language-button french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/lmdp-inscription-registration-2" target="_blank" style="text-decoration: none;" >
+            <a  id="lmdp-french-button" class="lmdp-language-button lmdp-french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/lmdp-inscription-registration-2" target="_blank" style="text-decoration: none;" >
               <input type="submit" class="btn btn-primary d-block w-45 img-fluid register-button" value="S'inscrire">
             </a>
           </div>
           
-          <div class="col-md-5 lmdp-language-logos-web">
-             <img id="lmdp-french-flag-web" class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer;" width="17%" title="Version française"/> 
-             <img id="lmdp-english-flag-web" class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer;" width="17%"/>
+          <!-- Desktop Flags -->
+          <div class="lmdp-language-logos-web">
+             <img id="lmdp-french-flag-web" class="img-fluid" src="icons/france.png" onclick="languageChange(event,'french')" style="margin-right: 5px; cursor:pointer;" width="10%" title="Version française"/> 
+             <img id="lmdp-english-flag-web" class="img-fluid" src="icons/united-kingdom.png" onclick="languageChange(event,'english')" style="cursor:pointer;" width="10%"/>
           </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Header Row -->
+      <div class="lmdp-mobile-header" style="display: none; padding: 10px 0; background: #ffffff;">
+        <div style="display: flex; align-items: center; padding: 0 10px;">
+          <!-- Left: ICT Logo -->
+          <div class="lmdp-mobile-logo" style="flex: 0 0 auto;">
+            <a href="index.html" class="site-logo">
+              <img width="35px" height="35px" src="./img/ict-logo.png" alt="ICT Logo">
+            </a>
+          </div>
+          
+          <!-- Spacer: takes up remaining space -->
+          <div style="flex: 1;"></div>
+          
+          <!-- Right: Register Button + Dropdown + Hamburger Menu (grouped together) -->
+          <div style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto;">
+            <!-- Register Button -->
+            <div class="lmdp-mobile-button" style="order: 1;">
+              <a id="lmdp-mobile-button" class="lmdp-language-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/lmdp-inscription-registration-2" target="_blank" style="text-decoration: none;">
+                <input type="submit" class="btn-sm img-fluid" value="S'inscrire" style="padding: 6px 12px; font-size: 12px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer;">
+              </a>
+            </div>
+            
+            <!-- Hamburger Menu -->
+            <div class="lmdp-mobile-menu-toggle" style="order: 3;">
+              <button id="lmdp-menu-toggle-btn" class="btn-sm" style="background: transparent; border: none; cursor: pointer; font-size: 20px; padding: 0;">
+                ☰
+              </button>
+            </div>
+            
+            <!-- Language Dropdown -->
+            <div class="lmdp-mobile-language-dropdown" style="position: relative; order: 2; margin-left: 10px;">
+              <button id="lmdp-language-dropdown-btn" class="btn-sm" style="background: transparent; border: none; padding: 0px !important; cursor: pointer; font-size: 11px; min-width: 50px;">
+                <span id="lmdp-language-dropdown-text">FR</span>
+                <span style="margin-left: 3px;">▼</span>
+              </button>
+              <div id="lmdp-language-dropdown-menu" class="lmdp-dropdown-menu" style="display: none; position: absolute; top: 100%; right: -5px; background: white; border: 1px solid #ddd; border-radius: 4px; min-width: 80px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1000;">
+                <a href="#" onclick="languageChange(event, 'french')" style="display: block; padding: 8px 10px; text-decoration: none; color: #000; border-bottom: 1px solid #eee; font-size: 12px;">FR 🇫🇷</a>
+                <a href="#" onclick="languageChange(event, 'english')" style="display: block; padding: 8px 10px; text-decoration: none; color: #000; font-size: 12px;">EN 🇬🇧</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="lmdp-mobile-menu" class="lmdp-mobile-menu" style="display: none; margin-top: 10px; padding: 10px; background: #f9f9f9; border-top: 1px solid #ddd;">
+          <ul id="lmdp-mobile-french-menu" class="lmdp-mobile-menu-list" style="list-style: none; margin: 0; padding: 0; display: block;">
+            <li><a href="./LMDP-new.html#section-1" style="display: block; padding: 10px; text-decoration: none; color: #000;">Contexte</a></li>
+            <li><a href="./LMDP-new.html#section-2" style="display: block; padding: 10px; text-decoration: none; color: #000;">Programme</a></li>
+            <li><a href="./LMDP-new.html#volunteer-section-french" style="display: block; padding: 10px; text-decoration: none; color: #000;">Informations Practiques</a></li>
+            <li><a href="#" style="display: block; padding: 10px; text-decoration: none; color: #000;">Inscriptions</a></li>
+          </ul>
+          
+          <ul id="lmdp-mobile-english-menu" class="lmdp-mobile-menu-list" style="list-style: none; margin: 0; padding: 0; display: none;">
+            <li><a href="./LMDP-new.html#english-section-1" style="display: block; padding: 10px; text-decoration: none; color: #000;">About</a></li>
+            <li><a href="./LMDP-new.html#english-section-2" style="display: block; padding: 10px; text-decoration: none; color: #000;">Program</a></li>
+            <li><a href="./LMDP-new.html#volunteer-section-english" style="display: block; padding: 10px; text-decoration: none; color: #000;">Practical Info</a></li>
+            <li><a href="#" style="display: block; padding: 10px; text-decoration: none; color: #000;">Registration</a></li>
+          </ul>
         </div>
       </div>
   </header>
@@ -568,7 +632,7 @@ culture authentiques</p>
             <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
           </div>
         </div>
-        <div style="padding: 8px 0; text-align: center; font-weight: 700;">Les moments fortsde LMDP 2022</div>
+        <div class="lmdp-video-title" style="padding: 8px 0; text-align: center; font-weight: 700;">Les moments forts de LMDP 2022</div>
       </a>
 
       <a href="https://www.youtube.com/watch?v=yndgbgnCi90" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 280px; width: 100%; text-decoration: none; color: inherit;">
@@ -578,7 +642,7 @@ culture authentiques</p>
             <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
           </div>
         </div>
-        <div style="padding: 8px 0; text-align: center; font-weight: 700;">Les moments forts de LMDP 2024</div>
+        <div class="lmdp-video-title" style="padding: 8px 0; text-align: center; font-weight: 700;">Les moments forts de LMDP 2024</div>
       </a>
     </div>
 
@@ -965,8 +1029,8 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
       const frenchContent = document.getElementById('french');
       const englishMenu = document.getElementById('english-menu');
       const frenchMenu = document.getElementById('french-menu');
-      const englishButton = document.getElementById('english-button');
-      const frenchButton = document.getElementById('french-button');
+      const englishButton = document.getElementById('lmdp-english-button');
+      const frenchButton = document.getElementById('lmdp-french-button');
       
       // Get all banner elements with LMDP prefix
       const frenchBannerWeb = document.getElementById('lmdp-french-banner-web');
@@ -1003,24 +1067,41 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         
         // Update button states
         if (englishButton) {
+          englishButton.style.setProperty('display', 'block', 'important');
           englishButton.style.opacity = '1';
           englishButton.style.pointerEvents = 'auto';
+          console.log('English button display set to:', englishButton.style.display);
+          console.log('English button computed style:', window.getComputedStyle(englishButton).display);
         }
         if (frenchButton) {
-          frenchButton.style.opacity = '0.5';
+          frenchButton.style.setProperty('display', 'none', 'important');
+          frenchButton.style.opacity = '0';
           frenchButton.style.pointerEvents = 'none';
+          console.log('French button display set to:', frenchButton.style.display);
+        }
+        
+        // Update mobile button text
+        const mobileButton = document.getElementById('lmdp-mobile-button');
+        if (mobileButton) {
+          const inputElement = mobileButton.querySelector('input');
+          if (inputElement) {
+            inputElement.value = 'Donate';
+            inputElement.href = 'https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur';
+          }
         }
         
         // Activate correct banner based on screen size
         if (isDesktop) {
           if (englishBannerWeb) {
             englishBannerWeb.classList.add('active');
-            console.log('Adding .active to english-banner-web');
+            englishBannerWeb.style.display = 'block';
+            console.log('Adding .active to english-banner-web (desktop)');
           }
         } else {
           if (englishBannerMobile) {
             englishBannerMobile.classList.add('active');
-            console.log('Adding .active to english-banner-mobile');
+            englishBannerMobile.style.display = 'block';
+            console.log('Adding .active to english-banner-mobile (mobile)');
           }
         }
         
@@ -1049,12 +1130,27 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         
         // Update button states
         if (englishButton) {
-          englishButton.style.opacity = '0.5';
+          englishButton.style.setProperty('display', 'none', 'important');
+          englishButton.style.opacity = '0';
           englishButton.style.pointerEvents = 'none';
+          console.log('English button hidden');
         }
         if (frenchButton) {
+          frenchButton.style.setProperty('display', 'block', 'important');
           frenchButton.style.opacity = '1';
           frenchButton.style.pointerEvents = 'auto';
+          console.log('French button display set to:', frenchButton.style.display);
+          console.log('French button computed style:', window.getComputedStyle(frenchButton).display);
+        }
+        
+        // Update mobile button text
+        const mobileButton = document.getElementById('lmdp-mobile-button');
+        if (mobileButton) {
+          const inputElement = mobileButton.querySelector('input');
+          if (inputElement) {
+            inputElement.value = "S'inscrire";
+            inputElement.href = 'https://www.helloasso.com/associations/indian-community-toulouse/evenements/lmdp-inscription-registration-2';
+          }
         }
         
         // Activate correct banner based on screen size
@@ -1063,6 +1159,7 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           console.log('Desktop mode - Adding .active to french-banner-web');
           if (frenchBannerWeb) {
             frenchBannerWeb.classList.add('active');
+            frenchBannerWeb.style.display = 'block';
             console.log('French banner web classes after adding .active:', frenchBannerWeb.className);
             console.log('French banner web computed style:', window.getComputedStyle(frenchBannerWeb).display);
           }
@@ -1070,6 +1167,7 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           console.log('Mobile mode - Adding .active to french-banner-mobile');
           if (frenchBannerMobile) {
             frenchBannerMobile.classList.add('active');
+            frenchBannerMobile.style.display = 'block';
             console.log('French banner mobile classes after adding .active:', frenchBannerMobile.className);
             console.log('French banner mobile computed style:', window.getComputedStyle(frenchBannerMobile).display);
           }
@@ -1094,9 +1192,17 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
     }
     
     // Handle window resize to update banners based on screen size
+    let resizeTimeout;
     window.addEventListener('resize', function() {
-      // Use global currentLanguage variable instead of checking button opacity
-      languageChange(null, currentLanguage);
+      // Clear any pending resize calls
+      clearTimeout(resizeTimeout);
+      
+      // Debounce: wait 250ms after resize stops before updating
+      resizeTimeout = setTimeout(function() {
+        console.log('Window resized - updating banners. Screen width:', window.innerWidth);
+        // Use global currentLanguage variable instead of checking button opacity
+        languageChange(null, currentLanguage);
+      }, 250);
     });
 
     // Initialize French as default on page load
@@ -1144,5 +1250,76 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           if (menu) menu.style.display = 'none';
         });
       });
+      
+      // ===== Mobile Menu and Language Dropdown ===== 
+      const mobileMenuToggleBtn = document.getElementById('lmdp-menu-toggle-btn');
+      const mobileMenu = document.getElementById('lmdp-mobile-menu');
+      const languageDropdownBtn = document.getElementById('lmdp-language-dropdown-btn');
+      const languageDropdownMenu = document.getElementById('lmdp-language-dropdown-menu');
+      const languageDropdownText = document.getElementById('lmdp-language-dropdown-text');
+      
+      // Toggle mobile menu
+      if (mobileMenuToggleBtn) {
+        mobileMenuToggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (mobileMenu.style.display === 'none' || !mobileMenu.style.display) {
+            mobileMenu.style.display = 'block';
+          } else {
+            mobileMenu.style.display = 'none';
+          }
+          // Close language dropdown when opening menu
+          languageDropdownMenu.style.display = 'none';
+        });
+      }
+      
+      // Toggle language dropdown
+      if (languageDropdownBtn) {
+        languageDropdownBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (languageDropdownMenu.style.display === 'none' || !languageDropdownMenu.style.display) {
+            languageDropdownMenu.style.display = 'block';
+          } else {
+            languageDropdownMenu.style.display = 'none';
+          }
+          // Close mobile menu when opening dropdown
+          mobileMenu.style.display = 'none';
+        });
+      }
+      
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function(e) {
+        const isLanguageDropdownBtn = e.target.closest('#lmdp-language-dropdown-btn');
+        const isLanguageDropdownMenu = e.target.closest('#lmdp-language-dropdown-menu');
+        const isMobileMenuBtn = e.target.closest('#lmdp-menu-toggle-btn');
+        const isMobileMenu = e.target.closest('#lmdp-mobile-menu');
+        
+        if (!isLanguageDropdownBtn && !isLanguageDropdownMenu) {
+          languageDropdownMenu.style.display = 'none';
+        }
+        
+        if (!isMobileMenuBtn && !isMobileMenu) {
+          mobileMenu.style.display = 'none';
+        }
+      });
+      
+      // Update language dropdown text when language changes
+      const originalLanguageChange = window.languageChange;
+      window.languageChange = function(event, lang) {
+        // Call original function
+        originalLanguageChange.call(this, event, lang);
+        
+        // Update mobile dropdown text
+        if (lang === 'french') {
+          languageDropdownText.textContent = 'FR';
+          // Update mobile menu to show French items
+          document.getElementById('lmdp-mobile-french-menu').style.display = 'block';
+          document.getElementById('lmdp-mobile-english-menu') ? (document.getElementById('lmdp-mobile-english-menu').style.display = 'none') : null;
+        } else if (lang === 'english') {
+          languageDropdownText.textContent = 'EN';
+          // Update mobile menu to show English items
+          document.getElementById('lmdp-mobile-english-menu') ? (document.getElementById('lmdp-mobile-english-menu').style.display = 'block') : null;
+          document.getElementById('lmdp-mobile-french-menu').style.display = 'none';
+        }
+      };
     });
   </script>
