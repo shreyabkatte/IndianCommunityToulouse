@@ -145,12 +145,12 @@
         <div class="lmdp-buttons-and-flags" style="display: flex !important; justify-content: flex-end; align-items: center; gap: 15px; flex-wrap: nowrap; margin-right: 30px;">
           <!-- Donate Button -->
           <a id="lmdp-english-button" class="lmdp-language-button lmdp-english-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none;">
-            <input type="submit" class="btn btn-primary d-block img-fluid register-button" value="Donate" style="padding: 10px 25px; font-size: 14px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60) !important; color: white; border: none;">
+            <input type="submit" class="btn btn-primary d-block img-fluid register-button" value="Donate" style="padding: 10px 25px; font-size: 14px; background: linear-gradient(to right, #1a3a5c 0%, #2a8fa3 100%) !important; color: white; border: none;">
           </a>
           
           <!-- Faire un don Button -->
           <a id="lmdp-french-button" class="lmdp-language-button lmdp-french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none;">
-            <input type="submit" class="btn btn-primary d-block img-fluid register-button" value="Faire un don" style="padding: 10px 25px; font-size: 14px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60) !important; color: white; border: none;">
+            <input type="submit" class="btn btn-primary d-block img-fluid register-button" value="Faire un don" style="padding: 10px 25px; font-size: 14px; background: linear-gradient(to right, #1a3a5c 0%, #2a8fa3 100%) !important; color: white; border: none;">
           </a>
           
           <!-- Language Flags -->
@@ -174,12 +174,33 @@
           <!-- Spacer: takes up remaining space -->
           <div style="flex: 1;"></div>
           
-          <!-- Right: Faire un don Button + Language Flags + Hamburger Menu (all to right) -->
-          <div style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto;">
-            <!-- Register Button -->
+          <!-- Right: Faire un don Button + S'inscrire/Register + Language Flags + Hamburger Menu (all to right) -->
+          <div style="display: flex; align-items: center; gap: 8px; flex: 0 0 auto;">
+            <!-- Donate Button (French) -->
             <div class="lmdp-mobile-button">
-              <a id="lmdp-mobile-button" class="lmdp-language-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none;">
-                <input type="submit" class="btn-sm img-fluid" value="Faire un don" style="padding: 6px 12px; font-size: 12px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer;">
+              <a id="lmdp-mobile-button-french" class="lmdp-language-button lmdp-french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none;">
+                <input type="submit" class="btn-sm img-fluid" value="Faire un don" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(to right, #1a3a5c 0%, #2a8fa3 100%); color: white; border: none; border-radius: 4px; cursor: pointer;">
+              </a>
+            </div>
+            
+            <!-- S'inscrire Button (French) -->
+            <div class="lmdp-mobile-button">
+              <a id="lmdp-mobile-button-inscrire" class="lmdp-language-button lmdp-french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="text-decoration: none;">
+                <input type="submit" class="btn-sm img-fluid" value="S'inscrire" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer;">
+              </a>
+            </div>
+            
+            <!-- Donate Button (English) -->
+            <div class="lmdp-mobile-button">
+              <a id="lmdp-mobile-button-english" class="lmdp-language-button lmdp-english-button" href="https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur" target="_blank" style="text-decoration: none; display: none;">
+                <input type="submit" class="btn-sm img-fluid" value="Donate" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(to right, #1a3a5c 0%, #2a8fa3 100%); color: white; border: none; border-radius: 4px; cursor: pointer;">
+              </a>
+            </div>
+            
+            <!-- Register Button (English) -->
+            <div class="lmdp-mobile-button">
+              <a id="lmdp-mobile-button-register" class="lmdp-language-button lmdp-english-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="text-decoration: none; display: none;">
+                <input type="submit" class="btn-sm img-fluid" value="Register" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer;">
               </a>
             </div>
             
@@ -205,16 +226,16 @@
             <li><a href="#section-1" style="display: block; padding: 10px; text-decoration: none; color: #000;">Contexte</a></li>
             <li><a href="#section-2" style="display: block; padding: 10px; text-decoration: none; color: #000;">Programme</a></li>
             <li><a href="#volunteer-section-french" style="display: block; padding: 10px; text-decoration: none; color: #000;">Informations Practiques</a></li>
-            <li><a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="display: block; padding: 10px; text-decoration: none; color: #000;">Atelier de cuisine indienne</a></li>
-            <li><a href="#" style="display: block; padding: 10px; text-decoration: none; color: #999;">Atelier d'art</a></li>
+            <li><a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="display: block; padding: 10px; text-decoration: none; color: #000;">Inscription - Atelier de cuisine indienne</a></li>
+            <li><a href="#" style="display: block; padding: 10px; text-decoration: none; color: #999;">Inscription - Atelier d'art</a></li>
           </ul>
           
           <ul id="lmdp-mobile-english-menu" class="lmdp-mobile-menu-list" style="list-style: none; margin: 0; padding: 0; display: none;">
             <li><a href="#english-section-1" style="display: block; padding: 10px; text-decoration: none; color: #000;">About</a></li>
             <li><a href="#english-section-2" style="display: block; padding: 10px; text-decoration: none; color: #000;">Program</a></li>
             <li><a href="#volunteer-section-english" style="display: block; padding: 10px; text-decoration: none; color: #000;">Practical Info</a></li>
-            <li><a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="display: block; padding: 10px; text-decoration: none; color: #000;">Cooking Workshop</a></li>
-            <li><a href="#" style="display: block; padding: 10px; text-decoration: none; color: #999;">Art Workshop</a></li>
+            <li><a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="display: block; padding: 10px; text-decoration: none; color: #000;">Registration - Cooking Workshop</a></li>
+            <li><a href="#" style="display: block; padding: 10px; text-decoration: none; color: #999;">Registration - Art Workshop</a></li>
           </ul>
         </div>
       </div>
@@ -676,7 +697,7 @@ culinaire et un témoignage de l'amitié durable qui lie deux nations - France e
 
       <!-- WORKSHOP 1: STREET FOOD PAVILION -->
       <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">Alimentation de rue - Marché</h3>
+        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">Street Food - Marketplace</h3>
         <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">
           Le marché propose une sélection de stands interactifs qui reflètent la diversité culinaire de l'Inde. Chaque stand met en avant des spécialités régionales authentiques de la
 cuisine de rue, préparées et présentées par des bénévoles originaires de ces régions, garantissant ainsi l'authenticité des saveurs. Les visiteurs peuvent se déplacer
@@ -728,7 +749,7 @@ techniques de cuisine essentielles, offrant ainsi une expérience à la fois ins
 
       <!-- WORKSHOP 3: CULTURAL STAGE -->
       <div style="background-color: #f0f8ff; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
-        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">CScène culturelle</h3>
+        <h3 style="color: #F15AA8; margin-bottom: 15px; font-size: 30px;">Scène culturelle</h3>
         <p style="color: #333; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
           Cette section rassemble des traditions musicales, chorégraphiques et scéniques venues de toute l'Inde, offrant au public une expérience culturelle vivante et captivante qui
 vient compléter le parcours gastronomique du festival.
@@ -1031,6 +1052,12 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
       const englishButton = document.getElementById('lmdp-english-button');
       const frenchButton = document.getElementById('lmdp-french-button');
       
+      // Get mobile buttons (new)
+      const mobileButtonFrench = document.getElementById('lmdp-mobile-button-french');
+      const mobileButtonInscrire = document.getElementById('lmdp-mobile-button-inscrire');
+      const mobileButtonEnglish = document.getElementById('lmdp-mobile-button-english');
+      const mobileButtonRegister = document.getElementById('lmdp-mobile-button-register');
+      
       // Get all banner elements with LMDP prefix
       const frenchBannerWeb = document.getElementById('lmdp-french-banner-web');
       const frenchBannerMobile = document.getElementById('lmdp-french-banner-mobile');
@@ -1064,7 +1091,7 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         if (englishMenu) englishMenu.style.display = 'flex';
         if (frenchMenu) frenchMenu.style.display = 'none';
         
-        // Update button states
+        // Update desktop button states
         if (englishButton) {
           englishButton.style.setProperty('display', 'block', 'important');
           englishButton.style.opacity = '1';
@@ -1079,15 +1106,17 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           console.log('French button display set to:', frenchButton.style.display);
         }
         
-        // Update mobile button text
-        const mobileButton = document.getElementById('lmdp-mobile-button');
-        if (mobileButton) {
-          const inputElement = mobileButton.querySelector('input');
-          if (inputElement) {
-            inputElement.value = 'Donate';
-            inputElement.href = 'https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur';
-          }
-        }
+        // Update mobile button visibility
+        if (mobileButtonFrench) mobileButtonFrench.style.display = 'none';
+        if (mobileButtonInscrire) mobileButtonInscrire.style.display = 'none';
+        if (mobileButtonEnglish) mobileButtonEnglish.style.display = 'block';
+        if (mobileButtonRegister) mobileButtonRegister.style.display = 'block';
+        
+        // Update mobile menu visibility
+        const mobileEnglishMenu = document.getElementById('lmdp-mobile-english-menu');
+        const mobileFrenchMenu = document.getElementById('lmdp-mobile-french-menu');
+        if (mobileEnglishMenu) mobileEnglishMenu.style.display = 'block';
+        if (mobileFrenchMenu) mobileFrenchMenu.style.display = 'none';
         
         // Activate correct banner based on screen size
         if (isDesktop) {
@@ -1127,7 +1156,7 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         if (englishMenu) englishMenu.style.display = 'none';
         if (frenchMenu) frenchMenu.style.display = 'flex';
         
-        // Update button states
+        // Update desktop button states
         if (englishButton) {
           englishButton.style.setProperty('display', 'none', 'important');
           englishButton.style.opacity = '0';
@@ -1142,15 +1171,17 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           console.log('French button computed style:', window.getComputedStyle(frenchButton).display);
         }
         
-        // Update mobile button text
-        const mobileButton = document.getElementById('lmdp-mobile-button');
-        if (mobileButton) {
-          const inputElement = mobileButton.querySelector('input');
-          if (inputElement) {
-            inputElement.value = "Faire un don";
-            inputElement.href = 'https://www.helloasso.com/associations/indian-community-toulouse/formulaires/5/informations-donateur';
-          }
-        }
+        // Update mobile button visibility
+        if (mobileButtonFrench) mobileButtonFrench.style.display = 'block';
+        if (mobileButtonInscrire) mobileButtonInscrire.style.display = 'block';
+        if (mobileButtonEnglish) mobileButtonEnglish.style.display = 'none';
+        if (mobileButtonRegister) mobileButtonRegister.style.display = 'none';
+        
+        // Update mobile menu visibility
+        const mobileEnglishMenu = document.getElementById('lmdp-mobile-english-menu');
+        const mobileFrenchMenu = document.getElementById('lmdp-mobile-french-menu');
+        if (mobileEnglishMenu) mobileEnglishMenu.style.display = 'none';
+        if (mobileFrenchMenu) mobileFrenchMenu.style.display = 'block';
         
         // Activate correct banner based on screen size
         console.log('isDesktop:', isDesktop);
