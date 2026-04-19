@@ -15,12 +15,12 @@ $(document).ready(function() {
           $(this).owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
-            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            nav: false,
             dots: true,
             items: 1,
             smartSpeed: 700,
-            autoplay: false
+            autoplay: false,
+            dotsClass: 'owl-dots-mobile'
           });
         }
       });
