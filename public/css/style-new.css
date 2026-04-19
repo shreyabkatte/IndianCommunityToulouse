@@ -201,10 +201,6 @@
   box-shadow: none !important;
 }
 
-.lmdp-faq-item p.expanded ~ .read-more-btn {
-  display: none !important;
-}
-
 @media (max-width: 768px) {
   .lmdp-faq-item {
     margin-bottom: 15px;

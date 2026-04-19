@@ -550,45 +550,43 @@
     </div>
 
     <!-- COLLABORATIONS SECTION - ENGLISH -->
-    <div class="lmdp-sections" style="border-top:2px solid #ededed; padding-top: 20px;">
-      <div style="margin-left: 5%; margin-right: 5%;">
-        <div data-aos="fade-right">
-          <h3 style="text-align: center;">Collaborations</h3>
-        </div>
+    <div class="lmdp-collaborations-section">
+      <div class="lmdp-collaborations-container">
+        <h3 class="lmdp-collaborations-title">Collaborations</h3>
         
-        <div class="row" style="margin: 20px; display: block !important;">
-          <div style="display: flex;">
-            <div class="col-md-4" style="display: flex; justify-content: flex-end;">
-              <div class="col-md-6" style="text-align: center;">
-                <h5 class="event-heading" style="font-size: 18px !important; font-family: IcoFont; font-style: italic; margin-bottom: 20px;">Organized by</h5>
-                <img src="icons/ICT full.jpg" style="width: 55%; height: auto;" alt="Organized by"/>
-              </div>
+        <!-- Organizer and Partners Row -->
+        <div class="lmdp-collaborations-row">
+          <div class="lmdp-collab-card">
+            <h4 class="lmdp-collab-subtitle">Organized by</h4>
+            <div class="lmdp-collab-logo">
+              <img src="icons/ICT full.jpg" alt="Indian Community Toulouse"/>
             </div>
-            <div class="col-md-7 col-sm-12" style="display: block; justify-content: center;">
-              <h5 class="col-md-12 col-sm-12 event-heading" style="font-size: 18px !important; font-family: IcoFont; font-style: italic; text-align: center; margin-bottom: 20px;">In collaboration with</h5>
-              <div style="display: flex; justify-content: center;">
-                <div class="col-md-4 col-sm-12" style="text-align: center;">
-                  <img src="icons/toulouse-marie.png" style="width: 45%; height: auto;" alt="Toulouse Marie"/>
-                </div>
-              </div>
+          </div>
+          
+          <div class="lmdp-collab-card">
+            <h4 class="lmdp-collab-subtitle">In collaboration with</h4>
+            <div class="lmdp-collab-logo">
+              <img src="icons/toulouse-marie.png" alt="Toulouse Marie"/>
             </div>
           </div>
         </div>
+        
+        <!-- Sponsors Section -->
+        <div class="lmdp-sponsors-section">
+          <h4 class="lmdp-sponsors-title">Sponsors</h4>
+          <div class="lmdp-sponsors-grid">
+            <div class="lmdp-sponsor-item">
+              <img src="img/LMDP/sponsors/Pranamya.png" alt="Sponsor"/>
+            </div>
+            <div class="lmdp-sponsor-item">
+              <img src="img/LMDP/sponsors/Joshore_Road.png" alt="Sponsor"/>
+            </div>
+            <div class="lmdp-sponsor-item">
+              <img src="img/LMDP/sponsors/Asie_bazar.png" alt="Sponsor"/>
+            </div>
 
-        <div class="row" style="margin: 20px; display: block !important;">
-          <h5 class="event-heading" style="font-size: 18px !important; font-family: IcoFont; margin-bottom:10px;margin-top:10px;font-style: italic; text-align: center;">Sponsors</h5>
-          <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-            <div class="col-md-2" style="text-align: center; margin: 10px;">
-              <img src="img/LMDP/sponsors/Annachi.jpg" style="max-width: 90%; height: auto;" alt="Sponsor"/>
-            </div>
-            <div class="col-md-2" style="text-align: center; margin: 10px;">
-              <img src="img/LMDP/sponsors/Asie_bazar.png" style="max-width: 90%; height: auto;" alt="Sponsor"/>
-            </div>
-            <div class="col-md-2" style="text-align: center; margin: 10px;">
-              <img src="img/LMDP/sponsors/Joshore_Road.png" style="max-width: 90%; height: auto;" alt="Sponsor"/>
-            </div>
-            <div class="col-md-2" style="text-align: center; margin: 10px;">
-              <img src="img/LMDP/sponsors/LOGO.jpg" style="max-width: 90%; height: auto;" alt="Sponsor"/>
+            <div class="lmdp-sponsor-item">
+              <img src="img/LMDP/sponsors/Annachi.jpg" alt="Sponsor"/>
             </div>
           </div>
         </div>
@@ -922,16 +920,17 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           <h4 class="lmdp-sponsors-title">Commanditaires</h4>
           <div class="lmdp-sponsors-grid">
             <div class="lmdp-sponsor-item">
-              <img src="img/LMDP/sponsors/Annachi.jpg" alt="Sponsor"/>
-            </div>
-            <div class="lmdp-sponsor-item">
-              <img src="img/LMDP/sponsors/Asie_bazar.png" alt="Sponsor"/>
+              <img src="img/LMDP/sponsors/Pranamya.png" alt="Sponsor"/>
             </div>
             <div class="lmdp-sponsor-item">
               <img src="img/LMDP/sponsors/Joshore_Road.png" alt="Sponsor"/>
             </div>
             <div class="lmdp-sponsor-item">
-              <img src="img/LMDP/sponsors/LOGO.jpg" alt="Sponsor"/>
+              <img src="img/LMDP/sponsors/Asie_bazar.png" alt="Sponsor"/>
+            </div>
+
+            <div class="lmdp-sponsor-item">
+              <img src="img/LMDP/sponsors/Annachi.jpg" alt="Sponsor"/>
             </div>
           </div>
         </div>
@@ -1032,38 +1031,114 @@ Additionally, there may be some restaurants that will be selling full portions o
 
       <!-- FRENCH FAQ -->
       <div id="french-faq" class="lmdp-faq-content">
-        <div class="row">
+         <div class="row">
           <div class="col-lg-6">
             <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
-              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Quand se déroulera le festival ?</h3>
-              <p style="color: #666; font-size: 14px;">La Mela des Plats 2026 aura lieu le 7 juin 2026. L'atelier de cuisine se déroulera le 30 mai 2026.</p>
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Date et lieu de l’événement</h3>
+              <p style="color: #666; font-size: 14px;">Ce festival culinaire, dont l’entrée est gratuite, proposera
+également une scène culturelle et des ateliers d'art. Il se tiendra le
+7 juin 2026 à la Salle des fêtes de Lafourguette. Veuillez noter
+qu'une éco-participation forfaitaire de 2 € sera demandée pour les
+couverts.
+En complément, un atelier de cuisine indienne est prévu le 30 mai
+2026 à la Classe des Gourmands (Port de l'Embouchure). Une
+inscription préalable est obligatoire pour cet atelier.</p>
             </div>
 
             <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
-              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Où puis-je m'inscrire ?</h3>
-              <p style="color: #666; font-size: 14px;">Vous pouvez vous inscrire via le bouton S'inscrire sur cette page, qui vous dirigera vers HelloAsso pour une inscription et un paiement sécurisés.</p>
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Dois-je m'inscrire à l'avance pour participer ?</h3>
+              <p style="color: #666; font-size: 14px;">L'inscription n'est pas obligatoire pour l'accès général à
+l'événement. En revanche, une pré-inscription est obligatoire si
+vous souhaitez participer aux ateliers de cuisine ou d'art.</p>
             </div>
 
             <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
-              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Y a-t-il des frais d'inscription ?</h3>
-              <p style="color: #666; font-size: 14px;">Les inscriptions aux ateliers nécessitent un paiement pour couvrir le matériel et les frais d'instruction. Pour le festival principal, les détails seront annoncés bientôt.</p>
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Les enfants peuvent-ils participer aux ateliers ?</h3>
+              <p style="color: #666; font-size: 14px;">Oui ! Il est également possible de s'inscrire aux ateliers pour
+s'initier à une nouvelle forme d'art.
+En plus des ateliers, un espace enfants gratuit sera mis en place
+pour leur permettre de profiter pleinement d'un environnement
+festif et ludique.</p>
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
-              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Quels ateliers sont disponibles ?</h3>
-              <p style="color: #666; font-size: 14px;">Nous proposons des ateliers culinaires et des ateliers d'art (peinture Warli, fabrication de lanternes, etc.). Les deux ateliers introduisent les arts culinaires et artisanaux traditionnels indiens.</p>
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Quel type de nourriture sera proposé ?</h3>
+              <p style="color: #666; font-size: 14px;">Vous découvrirez une cuisine de rue indienne authentique,
+préparée par des exposants passionnés issus de la communauté.
+Attendez-vous à retrouver vos classiques préférés comme les
+samosas, le chaat, le pani puri, le vada pav, et bien plus encore !</p>
             </div>
 
             <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
-              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Qui peut participer ?</h3>
-              <p style="color: #666; font-size: 14px;">Tous les événements sont ouverts à tous ! Que vous soyez intéressé par la cuisine indienne, la culture ou simplement à la recherche d'une expérience familiale amusante, vous êtes les bienvenu.</p>
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">La nourriture est-elle vraiment gratuite ?
+Comment fonctionne la dégustation ?</h3>
+              <p style="color: #666; font-size: 14px;">Oui ! Toutes les dégustations proposées par nos exposants sont
+entièrement gratuites. Une éco-participation de 2 € pour les
+couverts sera à régler à l'entrée du marché. Il vous suffira de
+déambuler entre les différents stands pour goûter aux échantillons
+offerts et découvrir de nouvelles saveurs !
+De plus, certains restaurants proposeront à la vente des portions
+complètes de leurs spécialités pour ceux qui souhaiteraient
+prolonger l'expérience.</p>
             </div>
 
             <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
-              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Y a-t-il des spectacles ?</h3>
-              <p style="color: #666; font-size: 14px;">Oui ! Notre scène culturelle propose de la musique, de la danse et d'autres spectacles mettant en avant les traditions artistiques diverses de l'Inde.</p>
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Y a-t-il des options végétariennes ou vegan ?</h3>
+              <p style="color: #666; font-size: 14px;">La Street Food indienne offre une variété incroyable pour tous les
+régimes alimentaires. De nombreux plats sont naturellement
+végétariens ou vegan. Des informations diététiques spécifiques
+seront affichées sur chaque stand.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Quels sont les horaires des ateliers ?</h3>
+              <p style="color: #666; font-size: 14px;">Les ateliers sont programmés sur deux jours distincts durant
+l'événement. L'atelier de cuisine aura lieu le 30 mai 2026, et les
+ateliers d'art se tiendront le 07 juin 2026.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Dois-je m'inscrire aux ateliers à l'avance ?</h3>
+              <p style="color: #666; font-size: 14px;">Oui, la pré-inscription est obligatoire pour les deux ateliers car le
+nombre de places est limité. Vous pouvez vous inscrire via le lien
+indiqué sur ce site internet.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Que dois-je apporter pour les ateliers ?</h3>
+              <p style="color: #666; font-size: 14px;">Tout le matériel sera fourni. Apportez simplement votre
+enthousiasme et votre créativité ! Les consignes spécifiques vous
+seront communiquées dès réception de votre inscription.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Puis-je me porter volontaire pour cuisiner lors de
+l'événement ?</h3>
+              <p style="color: #666; font-size: 14px;">Absolument ! Nous recherchons des chefs amateurs passionnés
+pour préparer de la Street food indienne. Veuillez vous inscrire
+pour en savoir plus sur les directives et l'organisation de
+l'événement : https://forms.gle/oCHdXVgrc1FzgjQd6</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Les ingrédients seront-ils fournis ?</h3>
+              <p style="color: #666; font-size: 14px;">Le coût d'achat des ingrédients sera remboursé par l'équipe
+organisatrice. Merci de vous inscrire pour obtenir plus
+d'informations.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Mon restaurant peut-il participer en tant que
+prestataire de restauration ?</h3>
+              <p style="color: #666; font-size: 14px;">Oui ! Nous accueillons avec plaisir les traiteurs indiens souhaitant
+proposer des portions complètes de leurs spécialités. Merci de
+remplir le formulaire de contact ci-dessus.</p>
             </div>
           </div>
         </div>
@@ -1119,6 +1194,65 @@ Additionally, there may be some restaurants that will be selling full portions o
   <script>
     // Global language state
     let currentLanguage = 'french'; // Default language
+
+    // Initialize Read More functionality for FAQ items
+    function initReadMore() {
+      const faqItems = document.querySelectorAll('.lmdp-faq-item p');
+      
+      faqItems.forEach(paragraph => {
+        // Remove any existing button first
+        const existingBtn = paragraph.nextElementSibling;
+        if (existingBtn && existingBtn.classList.contains('read-more-btn')) {
+          existingBtn.remove();
+        }
+        
+        // Reset inline styles to get true height
+        const originalDisplay = paragraph.style.display;
+        const originalMaxHeight = paragraph.style.maxHeight;
+        const originalOverflow = paragraph.style.overflow;
+        
+        paragraph.style.display = 'block';
+        paragraph.style.maxHeight = 'none';
+        paragraph.style.overflow = 'visible';
+        
+        // Get line height and full height
+        const lineHeight = parseFloat(window.getComputedStyle(paragraph).lineHeight);
+        const fullHeight = paragraph.scrollHeight;
+        const lines = Math.ceil(fullHeight / lineHeight);
+        
+        console.log('Paragraph:', paragraph.textContent.substring(0, 50), 'Lines:', lines, 'Height:', fullHeight, 'LineHeight:', lineHeight);
+        
+        // Restore original inline styles
+        paragraph.style.display = originalDisplay || '';
+        paragraph.style.maxHeight = originalMaxHeight || '4.8em';
+        paragraph.style.overflow = originalOverflow || 'hidden';
+        
+        // Only add read more if text exceeds 3 lines
+        if (lines > 3) {
+          console.log('Creating Read More button for:', paragraph.textContent.substring(0, 50));
+          
+          // Create and insert read more button
+          const readMoreBtn = document.createElement('button');
+          readMoreBtn.className = 'read-more-btn';
+          readMoreBtn.type = 'button';
+          
+          // Set text based on current language
+          const readMoreText = currentLanguage === 'french' ? 'Lire la suite' : 'Read More';
+          const readLessText = currentLanguage === 'french' ? 'Afficher moins' : 'Read Less';
+          readMoreBtn.textContent = readMoreText;
+          readMoreBtn.setAttribute('aria-expanded', 'false');
+          
+          readMoreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isExpanded = paragraph.classList.toggle('expanded');
+            this.textContent = isExpanded ? readLessText : readMoreText;
+            this.setAttribute('aria-expanded', isExpanded);
+          });
+          
+          paragraph.parentNode.insertBefore(readMoreBtn, paragraph.nextSibling);
+        }
+      });
+    }
 
     // Language change function - Clean system with banner IDs
     function languageChange(event, lang) {
@@ -1316,6 +1450,13 @@ Additionally, there may be some restaurants that will be selling full portions o
           }
         });
       }
+      
+      // Reinitialize Read More buttons after language change
+      if (typeof initReadMore === 'function') {
+        setTimeout(function() {
+          initReadMore();
+        }, 100);
+      }
     }
     
     // Handle window resize to update banners based on screen size
@@ -1504,77 +1645,20 @@ Additionally, there may be some restaurants that will be selling full portions o
           document.getElementById('lmdp-mobile-english-menu') ? (document.getElementById('lmdp-mobile-english-menu').style.display = 'block') : null;
           document.getElementById('lmdp-mobile-french-menu').style.display = 'none';
         }
+        
+        // Reinitialize Read More buttons after language change
+        if (typeof initReadMore === 'function') {
+          setTimeout(function() {
+            initReadMore();
+          }, 100);
+        }
       };
 
-      // Initialize Read More functionality for FAQ items
-      function initReadMore() {
-        const faqItems = document.querySelectorAll('.lmdp-faq-item p');
-        
-        faqItems.forEach(paragraph => {
-          // Remove any existing button first
-          const existingBtn = paragraph.nextElementSibling;
-          if (existingBtn && existingBtn.classList.contains('read-more-btn')) {
-            existingBtn.remove();
-          }
-          
-          // Reset inline styles to get true height
-          const originalDisplay = paragraph.style.display;
-          const originalMaxHeight = paragraph.style.maxHeight;
-          const originalOverflow = paragraph.style.overflow;
-          
-          paragraph.style.display = 'block';
-          paragraph.style.maxHeight = 'none';
-          paragraph.style.overflow = 'visible';
-          
-          // Get line height and full height
-          const lineHeight = parseFloat(window.getComputedStyle(paragraph).lineHeight);
-          const fullHeight = paragraph.scrollHeight;
-          const lines = Math.ceil(fullHeight / lineHeight);
-          
-          console.log('Paragraph:', paragraph.textContent.substring(0, 50), 'Lines:', lines, 'Height:', fullHeight, 'LineHeight:', lineHeight);
-          
-          // Restore original inline styles
-          paragraph.style.display = originalDisplay || '';
-          paragraph.style.maxHeight = originalMaxHeight || '4.8em';
-          paragraph.style.overflow = originalOverflow || 'hidden';
-          
-          // Only add read more if text exceeds 3 lines
-          if (lines > 3) {
-            console.log('Creating Read More button for:', paragraph.textContent.substring(0, 50));
-            
-            // Create and insert read more button
-            const readMoreBtn = document.createElement('button');
-            readMoreBtn.className = 'read-more-btn';
-            readMoreBtn.type = 'button';
-            readMoreBtn.textContent = 'Read More';
-            readMoreBtn.setAttribute('aria-expanded', 'false');
-            
-            readMoreBtn.addEventListener('click', function(e) {
-              e.preventDefault();
-              const isExpanded = paragraph.classList.toggle('expanded');
-              this.textContent = isExpanded ? 'Read Less' : 'Read More';
-              this.setAttribute('aria-expanded', isExpanded);
-            });
-            
-            paragraph.parentNode.insertBefore(readMoreBtn, paragraph.nextSibling);
-          }
-        });
-      }
-      
       // Call on page load with a slight delay to ensure CSS is applied
       setTimeout(function() {
         console.log('Initializing Read More...');
         initReadMore();
       }, 300);
-      
-      // Reinitialize read more when language changes
-      const originalLanguageChangeFn = window.languageChange;
-      window.languageChange = function(event, lang) {
-        originalLanguageChangeFn.call(this, event, lang);
-        setTimeout(function() {
-          initReadMore();
-        }, 100);
-      };
     });
   </script>
 </body>
