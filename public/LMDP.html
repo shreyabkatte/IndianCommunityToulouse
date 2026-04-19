@@ -331,7 +331,7 @@
             <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
           </div>
         </div>
-        <div style="padding: 8px 0; text-align: center; font-weight: 700;">LMDP 1 Highlights</div>
+        <div class="lmdp-video-title" style="padding: 8px 0; text-align: center; font-weight: 700;">LMDP 1 Highlights</div>
       </a>
 
       <a href="https://www.youtube.com/watch?v=yndgbgnCi90" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 280px; width: 100%; text-decoration: none; color: inherit;">
@@ -341,7 +341,7 @@
             <i class="fas fa-play" style="color: white; font-size: 24px; margin-left: 4px;"></i>
           </div>
         </div>
-        <div style="padding: 8px 0; text-align: center; font-weight: 700;">LMDP 2 Highlights</div>
+        <div class="lmdp-video-title" style="padding: 8px 0; text-align: center; font-weight: 700;">LMDP 2 Highlights</div>
       </a>
     </div>
 
@@ -1279,15 +1279,29 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         const isLanguageDropdownMenu = e.target.closest('#lmdp-language-dropdown-menu');
         const isMobileMenuBtn = e.target.closest('#lmdp-menu-toggle-btn');
         const isMobileMenu = e.target.closest('#lmdp-mobile-menu');
+        const isMobileMenuToggleDiv = e.target.closest('.lmdp-mobile-menu-toggle');
         
         if (!isLanguageDropdownBtn && !isLanguageDropdownMenu) {
           languageDropdownMenu.style.display = 'none';
         }
         
-        if (!isMobileMenuBtn && !isMobileMenu) {
+        // Close mobile menu if clicking outside both the menu and the toggle button
+        if (!isMobileMenuBtn && !isMobileMenu && !isMobileMenuToggleDiv) {
           mobileMenu.style.display = 'none';
         }
       });
+      
+      // Also close menu when clicking on body/document outside header
+      document.body.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('lmdp-mobile-menu');
+        const isMobileMenuBtn = e.target.closest('#lmdp-menu-toggle-btn');
+        const isMobileMenu = e.target.closest('#lmdp-mobile-menu');
+        const isMobileMenuToggleDiv = e.target.closest('.lmdp-mobile-menu-toggle');
+        
+        if (mobileMenu && mobileMenu.style.display === 'block' && !isMobileMenuBtn && !isMobileMenu && !isMobileMenuToggleDiv) {
+          mobileMenu.style.display = 'none';
+        }
+      }, true); // Use capturing phase for more reliable detection
       
       // Update language dropdown text when language changes
       const originalLanguageChange = window.languageChange;
