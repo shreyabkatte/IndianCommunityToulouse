@@ -183,11 +183,15 @@
               </a>
             </div>
             
-            <!-- S'inscrire Button (French) -->
-            <div class="lmdp-mobile-button">
-              <a id="lmdp-mobile-button-inscrire" class="lmdp-language-button lmdp-french-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="text-decoration: none;">
-                <input type="submit" class="btn-sm img-fluid" value="S'inscrire" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer;">
-              </a>
+            <!-- S'inscrire Button (French) with Dropdown -->
+            <div class="lmdp-mobile-button" style="position: relative;">
+              <button id="lmdp-mobile-button-inscrire" class="lmdp-language-button lmdp-french-button" onclick="toggleInscriptionDropdown(event)" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer;">
+                S'inscrire ▼
+              </button>
+              <div id="lmdp-inscription-dropdown" class="lmdp-dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ddd; border-radius: 4px; min-width: 200px; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="display: block; padding: 10px 15px; text-decoration: none; color: #333; border-bottom: 1px solid #eee;">Atelier de cuisine indienne</a>
+                <a href="#" style="display: block; padding: 10px 15px; text-decoration: none; color: #999; cursor: not-allowed;">Atelier d'art (Bientôt)</a>
+              </div>
             </div>
             
             <!-- Donate Button (English) -->
@@ -197,11 +201,15 @@
               </a>
             </div>
             
-            <!-- Register Button (English) -->
-            <div class="lmdp-mobile-button">
-              <a id="lmdp-mobile-button-register" class="lmdp-language-button lmdp-english-button" href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="text-decoration: none; display: none;">
-                <input type="submit" class="btn-sm img-fluid" value="Register" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer;">
-              </a>
+            <!-- Register Button (English) with Dropdown -->
+            <div class="lmdp-mobile-button" style="position: relative;">
+              <button id="lmdp-mobile-button-register" class="lmdp-language-button lmdp-english-button" onclick="toggleRegistrationDropdown(event)" style="padding: 6px 12px; font-size: 11px; background: linear-gradient(-45deg, #E23CBF, #E94B8F, #F15A60); color: white; border: none; border-radius: 4px; cursor: pointer; display: none;">
+                Register ▼
+              </button>
+              <div id="lmdp-registration-dropdown" class="lmdp-dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ddd; border-radius: 4px; min-width: 200px; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <a href="https://www.helloasso.com/associations/indian-community-toulouse/evenements/atelier-de-cuisine-indienne-la-mela-des-plats-3" target="_blank" style="display: block; padding: 10px 15px; text-decoration: none; color: #333; border-bottom: 1px solid #eee;">Cooking Workshop</a>
+                <a href="#" style="display: block; padding: 10px 15px; text-decoration: none; color: #999; cursor: not-allowed;">Art Workshop (Coming Soon)</a>
+              </div>
             </div>
             
             <!-- French Flag -->
@@ -935,6 +943,137 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
 
   </div>
 
+  <!-- FAQ SECTION -->
+  <div class="lmdp-faq-section" style="padding: 50px 0; background-color: #f9f9f9;">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="lmdp-container" data-aos="fade-up">
+          <h3 id="section-2" style="text-align: center; scroll-margin-top: 80px;">FAQ</h3>
+        </div>
+      </div>
+      
+      <!-- ENGLISH FAQ -->
+      <div id="english-faq" class="lmdp-faq-content" style="display: none;">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">When and where is the event taking place?</h3>
+              <p style="color: #666; font-size: 14px;">This free to enter Food festival along with cultural stage & art workshops will happen on June 07, 2026 at Salle des fetes Lafourguette. However, there is a standard 2€ Eco participation charge for the cutlery. 
+In addition to that, an Indian Cooking workshop is planned on May 30, 2026 at Classe des gourmands, Port de l'embouchure that needs pre registration.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Do I need to register in advance to attend?</h3>
+              <p style="color: #666; font-size: 14px;">General attendance registration is not mandatory. However, pre-registration is mandatory
+                 if you wish to participate in the Cooking or art workshops.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Can children participate in the workshops?</h3>
+              <p style="color: #666; font-size: 14px;">"Yes! The children can also enrol themselves into learning a new art form. 
+In addition to workshops, a free kids zone would also be set-up for kids to indulge in the fun-filled environment."</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">What kind of food will be available?</h3>
+              <p style="color: #666; font-size: 14px;">You'll experience authentic Indian street food prepared by passionate food exhibitors from the community.
+                 Expect favorites like samosas, chaat, pani puri, vada pav, and much more</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Is the food really free? How does the tasting work?</h3>
+              <p style="color: #666; font-size: 14px;">Yes! All bite-sized tastings from our food exhibitors are completely free. There will be a 2 euro Eco cutlery fee that can be paid at entry to marketplace. Simply walk around to different food stations, sample the complimentary bite-sized offerings, and discover new flavors! 
+Additionally, there may be some restaurants that will be selling full portions of their specialties if you'd like more."</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Are there vegetarian/vegan options?</h3>
+              <p style="color: #666; font-size: 14px;">	Indian street food offers incredible variety for all dietary preferences. Many dishes are naturally vegetarian or vegan. Specific dietary information will be available at each food station.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">When are the workshops scheduled?</h3>
+              <p style="color: #666; font-size: 14px;">	The workshops are scheduled on two different days during the event.
+                 Cooking workshop is taking place on the 30 May 2026 and the art workshops on the 07 June 2026.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Do I need to register for workshops in advance?</h3>
+              <p style="color: #666; font-size: 14px;">	Yes, pre-registration is mandatory for both workshops as space is limited. You can register through the link mentioned in this website.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">What should I bring to the workshops?</h3>
+              <p style="color: #666; font-size: 14px;">	All materials will be provided. Just bring your enthusiasm and creativity! Specific requirements will be shared upon receipt of registration.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Can I volunteer to cook for the event?</h3>
+              <p style="color: #666; font-size: 14px;">Absolutely! We're looking for passionate home chefs to prepare Indian street food. Please register to know more about the guidelines and planning of the event: https://forms.gle/oCHdXVgrc1FzgjQd6</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Will ingredients be provided?</h3>
+              <p style="color: #666; font-size: 14px;">The cost of purchasing ingredients will be reimbursed by the event team. Kindly register to get more information.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Can my restaurant participate as a food vendor?	</h3>
+              <p style="color: #666; font-size: 14px;">Yes! We welcome Indian caterers to serve full portions of their specialties. Please fill the contact form above.</p>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- FRENCH FAQ -->
+      <div id="french-faq" class="lmdp-faq-content">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Quand se déroulera le festival ?</h3>
+              <p style="color: #666; font-size: 14px;">La Mela des Plats 2026 aura lieu le 7 juin 2026. L'atelier de cuisine se déroulera le 30 mai 2026.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Où puis-je m'inscrire ?</h3>
+              <p style="color: #666; font-size: 14px;">Vous pouvez vous inscrire via le bouton S'inscrire sur cette page, qui vous dirigera vers HelloAsso pour une inscription et un paiement sécurisés.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Y a-t-il des frais d'inscription ?</h3>
+              <p style="color: #666; font-size: 14px;">Les inscriptions aux ateliers nécessitent un paiement pour couvrir le matériel et les frais d'instruction. Pour le festival principal, les détails seront annoncés bientôt.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Quels ateliers sont disponibles ?</h3>
+              <p style="color: #666; font-size: 14px;">Nous proposons des ateliers culinaires et des ateliers d'art (peinture Warli, fabrication de lanternes, etc.). Les deux ateliers introduisent les arts culinaires et artisanaux traditionnels indiens.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Qui peut participer ?</h3>
+              <p style="color: #666; font-size: 14px;">Tous les événements sont ouverts à tous ! Que vous soyez intéressé par la cuisine indienne, la culture ou simplement à la recherche d'une expérience familiale amusante, vous êtes les bienvenu.</p>
+            </div>
+
+            <div class="lmdp-faq-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 style="color: #333; font-size: 16px; margin-bottom: 10px;">Y a-t-il des spectacles ?</h3>
+              <p style="color: #666; font-size: 14px;">Oui ! Notre scène culturelle propose de la musique, de la danse et d'autres spectacles mettant en avant les traditions artistiques diverses de l'Inde.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <div class="site-section cta-section" style="padding-top: 30px; padding-bottom: 30px;">
     <div class="container">
@@ -1040,6 +1179,12 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         if (englishMenu) englishMenu.style.display = 'flex';
         if (frenchMenu) frenchMenu.style.display = 'none';
         
+        // Show English FAQ and hide French FAQ
+        const frenchFaqDiv = document.getElementById('french-faq');
+        const englishFaqDiv = document.getElementById('english-faq');
+        if (frenchFaqDiv) frenchFaqDiv.style.display = 'none';
+        if (englishFaqDiv) englishFaqDiv.style.display = 'block';
+        
         // Update desktop button states
         if (englishButton) {
           englishButton.style.setProperty('display', 'block', 'important');
@@ -1104,6 +1249,12 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         if (frenchContent) frenchContent.style.display = 'block';
         if (englishMenu) englishMenu.style.display = 'none';
         if (frenchMenu) frenchMenu.style.display = 'flex';
+        
+        // Show French FAQ and hide English FAQ
+        const frenchFaqDiv = document.getElementById('french-faq');
+        const englishFaqDiv = document.getElementById('english-faq');
+        if (frenchFaqDiv) frenchFaqDiv.style.display = 'block';
+        if (englishFaqDiv) englishFaqDiv.style.display = 'none';
         
         // Update desktop button states
         if (englishButton) {
@@ -1182,6 +1333,41 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
         // Use global currentLanguage variable instead of checking button opacity
         languageChange(null, currentLanguage);
       }, 250);
+    });
+
+    // Dropdown toggle functions for S'inscrire and Register
+    function toggleInscriptionDropdown(event) {
+      event.preventDefault();
+      const dropdown = document.getElementById('lmdp-inscription-dropdown');
+      if (dropdown) {
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+    
+    function toggleRegistrationDropdown(event) {
+      event.preventDefault();
+      const dropdown = document.getElementById('lmdp-registration-dropdown');
+      if (dropdown) {
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      const inscriptionBtn = document.getElementById('lmdp-mobile-button-inscrire');
+      const inscriptionDropdown = document.getElementById('lmdp-inscription-dropdown');
+      const registrationBtn = document.getElementById('lmdp-mobile-button-register');
+      const registrationDropdown = document.getElementById('lmdp-registration-dropdown');
+      
+      // Close inscription dropdown if clicking outside
+      if (inscriptionDropdown && !e.target.closest('#lmdp-mobile-button-inscrire') && !e.target.closest('#lmdp-inscription-dropdown')) {
+        inscriptionDropdown.style.display = 'none';
+      }
+      
+      // Close registration dropdown if clicking outside
+      if (registrationDropdown && !e.target.closest('#lmdp-mobile-button-register') && !e.target.closest('#lmdp-registration-dropdown')) {
+        registrationDropdown.style.display = 'none';
+      }
     });
 
     // Initialize French as default on page load
@@ -1322,5 +1508,77 @@ personnalisés pour s’adapter à vos préférences, vous permettant d’accéd
           document.getElementById('lmdp-mobile-french-menu').style.display = 'none';
         }
       };
+
+      // Initialize Read More functionality for FAQ items
+      function initReadMore() {
+        const faqItems = document.querySelectorAll('.lmdp-faq-item p');
+        
+        faqItems.forEach(paragraph => {
+          // Remove any existing button first
+          const existingBtn = paragraph.nextElementSibling;
+          if (existingBtn && existingBtn.classList.contains('read-more-btn')) {
+            existingBtn.remove();
+          }
+          
+          // Reset inline styles to get true height
+          const originalDisplay = paragraph.style.display;
+          const originalMaxHeight = paragraph.style.maxHeight;
+          const originalOverflow = paragraph.style.overflow;
+          
+          paragraph.style.display = 'block';
+          paragraph.style.maxHeight = 'none';
+          paragraph.style.overflow = 'visible';
+          
+          // Get line height and full height
+          const lineHeight = parseFloat(window.getComputedStyle(paragraph).lineHeight);
+          const fullHeight = paragraph.scrollHeight;
+          const lines = Math.ceil(fullHeight / lineHeight);
+          
+          console.log('Paragraph:', paragraph.textContent.substring(0, 50), 'Lines:', lines, 'Height:', fullHeight, 'LineHeight:', lineHeight);
+          
+          // Restore original inline styles
+          paragraph.style.display = originalDisplay || '';
+          paragraph.style.maxHeight = originalMaxHeight || '4.8em';
+          paragraph.style.overflow = originalOverflow || 'hidden';
+          
+          // Only add read more if text exceeds 3 lines
+          if (lines > 3) {
+            console.log('Creating Read More button for:', paragraph.textContent.substring(0, 50));
+            
+            // Create and insert read more button
+            const readMoreBtn = document.createElement('button');
+            readMoreBtn.className = 'read-more-btn';
+            readMoreBtn.type = 'button';
+            readMoreBtn.textContent = 'Read More';
+            readMoreBtn.setAttribute('aria-expanded', 'false');
+            
+            readMoreBtn.addEventListener('click', function(e) {
+              e.preventDefault();
+              const isExpanded = paragraph.classList.toggle('expanded');
+              this.textContent = isExpanded ? 'Read Less' : 'Read More';
+              this.setAttribute('aria-expanded', isExpanded);
+            });
+            
+            paragraph.parentNode.insertBefore(readMoreBtn, paragraph.nextSibling);
+          }
+        });
+      }
+      
+      // Call on page load with a slight delay to ensure CSS is applied
+      setTimeout(function() {
+        console.log('Initializing Read More...');
+        initReadMore();
+      }, 300);
+      
+      // Reinitialize read more when language changes
+      const originalLanguageChangeFn = window.languageChange;
+      window.languageChange = function(event, lang) {
+        originalLanguageChangeFn.call(this, event, lang);
+        setTimeout(function() {
+          initReadMore();
+        }, 100);
+      };
     });
   </script>
+</body>
+</html>
