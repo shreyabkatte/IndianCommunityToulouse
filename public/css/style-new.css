@@ -377,6 +377,10 @@
   max-height: 100px;
 }
 
+.lmdp-sponsor-item:first-child img {
+  max-height: 140px;
+}
+
 /* ====== MOBILE RESPONSIVE - COLLABORATIONS ====== */
 @media (max-width: 992px) {
   .lmdp-collaborations-section {
