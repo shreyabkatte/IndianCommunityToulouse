@@ -352,6 +352,11 @@
   padding: 20px;
 }
 
+.lmdp-collaborations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .lmdp-sponsor-item {
   background: #f9f9f9;
   padding: 20px;
@@ -443,6 +448,12 @@
     padding: 10px;
   }
 
+   .lmdp-collaborations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+  }
+
   .lmdp-sponsor-item {
     min-height: 120px;
     padding: 15px;
@@ -490,6 +501,12 @@
   }
 
   .lmdp-sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 5px;
+  }
+
+  .lmdp-collaborations-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 5px;
